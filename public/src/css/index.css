@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+ul {
+    z-index: 1;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    position:fixed;
+    top:0;
+    width:100%;
+    padding: 0;
+}
+
+li {
+    display: block;
+}
+
+.tabs {
+    padding: 10px 20px;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.tabs:hover {
+    background-color: #111;
+  }
+  
+#login {
+    padding: 10px 20px;
+    float: right;
+}
+#search {
+    padding: 10px 20px;
+    float: right;
+}

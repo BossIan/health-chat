@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/chat.css">
+</head>
+<body>
+    <ul class='tab'>
+        <li><a class="tabs" href="index.html">Home</a></li>
+        <li><a class="tabs" href="activities.html">Activities</a></li>
+        <li><a class="tabs" href="therapy.html">Therapy</a></li>
+        <li><a class="tabs" href="reminders.html">Reminders</a></li>
+        <li><a class="tabs" id='login' href="login.html">Login</a></li>
+        <li><a class="tabs" id='search' href="">Search</a></li>
+    </ul>
+    <div class="chat-bar-collapsible"> 
+        <button id="chat-button" type="button" class="collapsible">Chat</button>
+        <div class="content">
+            <div class="full-chat-block">
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: lightgray;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                            </div>
+                        </div>
+                          <div id="chat-bar-bottom">
+                            <p></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+    <script src="src/nlp.js"></script>
+    <script src="src/responses.js"></script>
+    <script src="src/chat.js"></script>
+    <script src="src/login.js"></script>
+    <div class="login-block">
+        <div class="login-container">
+            <label for="uname"><b>Email</b></label>
+            <input id="unametext" type="text" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input id="pswtext" type="password" placeholder="Enter Password" name="psw" required>
+        
+            <button class="btn" type="submit" onclick="login()">Login</button>
+            <button class="btn" type="submit" onclick="register()">Register</button>
+            <label>
+              <input id="rememberme" type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+    </div>
+</body>
+</html>

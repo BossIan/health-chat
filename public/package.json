@@ -1,0 +1,35 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browserdist": "browserify ./login.js | terser --compress --mangle > ./src/mysql.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "terser": "^5.12.1"
+  },
+  "dependencies": {
+    "@nlpjs/core": "^4.23.4",
+    "@nlpjs/lang-en-min": "^4.23.4",
+    "@nlpjs/nlp": "^4.23.4",
+    "@nlpjs/request-rn": "^4.23.4",
+    "aws4": "^1.11.0",
+    "bson-ext": "^4.0.2",
+    "express-session": "^1.17.2",
+    "kerberos": "^2.0.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.11",
+    "mysql": "^2.18.1",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.0.0",
+    "snappy": "^7.1.1"
+  }
+}
