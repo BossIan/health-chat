@@ -1,5 +1,5 @@
-const socket = io('localhost:' + location.port);
-console.log(location.port);
+const socket = io('localhost:' + port);
+console.log(port);
 var collapsible = document.getElementsByClassName('collapsible');
 
 for (let i = 0; i < collapsible.length; i++) {
