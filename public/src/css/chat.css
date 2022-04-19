@@ -189,3 +189,6 @@
 #chat-chat {
     display: none;
 }
+.chattab {
+    position: fixed;
+}
