@@ -27,6 +27,46 @@
         <div class="content">
             <div class="full-chat-block">
                 <div class="outer-container">
+                    <div class="chattab">
+                        <button class="chattabs" onclick="
+                            document.getElementById('bot-chat').style.display = 'block'
+                            document.getElementById('chat-chat').style.display = 'none'
+                        ">Bot</button>
+                        <button class="chattabs" onclick="
+                        document.getElementById('bot-chat').style.display = 'none'
+                        document.getElementById('chat-chat').style.display = 'block'
+                        ">Chat</button>
+                      </div>
+                    <div class="chat-container">
+                        <div class="chatbox" id="bot-chat">
+                            <h5 class="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+                        <div class="chatbox" id="chat-chat">
+                            <h5 class="chat-timestamp"></h5>
+                        </div>
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: lightgray;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                            </div>
+                        </div>
+                          <div id="chat-bar-bottom">
+                            <p></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <button id="chat-button" type="button" class="collapsible">Chat</button>
+        <div class="content">
+            <div class="full-chat-block">
+                <div class="outer-container">
                     <div class="chat-container">
                         <div id="chatbox">
                             <h5 id="chat-timestamp"></h5>

@@ -24,10 +24,23 @@
         <div class="content">
             <div class="full-chat-block">
                 <div class="outer-container">
+                    <div class="chattab">
+                        <button class="chattabs" onclick="
+                            document.getElementById('bot-chat').style.display = 'block'
+                            document.getElementById('chat-chat').style.display = 'none'
+                        ">Bot</button>
+                        <button class="chattabs" onclick="
+                        document.getElementById('bot-chat').style.display = 'none'
+                        document.getElementById('chat-chat').style.display = 'block'
+                        ">Chat</button>
+                      </div>
                     <div class="chat-container">
-                        <div id="chatbox">
-                            <h5 id="chat-timestamp"></h5>
+                        <div class="chatbox" id="bot-chat">
+                            <h5 class="chat-timestamp"></h5>
                             <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+                        <div class="chatbox" id="chat-chat">
+                            <h5 class="chat-timestamp"></h5>
                         </div>
                         <div class="chat-bar-input-block">
                             <div id="userInput">
