@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "browserdist": "browserify ./login.js | terser --compress --mangle > ./src/mysql.js",
+    "browserdist": "browserify ./axios.js | terser --compress --mangle > ./src/axios.js",
     "start": "node index.js"
   },
   "keywords": [],
@@ -21,6 +21,7 @@
     "@nlpjs/nlp": "^4.23.4",
     "@nlpjs/request-rn": "^4.23.4",
     "aws4": "^1.11.0",
+    "axios": "^0.26.1",
     "bson-ext": "^4.0.2",
     "express-session": "^1.17.2",
     "kerberos": "^2.0.0",
