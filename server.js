@@ -38,6 +38,9 @@ io.on('connection', function (socket) {
           socket.emit('login success')
           console.log(dbdata);
         }
+        else {
+          socket.emit('login failed')
+        }
       })
     })
     socket.on('register', function (data) {

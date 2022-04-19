@@ -29,7 +29,9 @@ function login() {
         jQuery(this).prev("login").attr("id","email");
         window.location.href = '/';
     })
-    
+    socket.once('login failed' ,function () {
+        alert('Invalid Email/Password')
+    })
 }
 function register() {
     if (ValidateEmail($('#unametext').val()) == false) {
