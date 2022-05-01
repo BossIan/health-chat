@@ -52,14 +52,12 @@ input[type=text], input[type=password] {
     padding: 16px;
   }
   
-  /* The "Forgot password" text */
   span.psw {
     float: right;
     padding-top: 10px;
   }
   
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
+  @media screen and (max-width: 600px) {
     span.psw {
       display: block;
       float: none;

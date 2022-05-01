@@ -1,13 +1,17 @@
 .bg-image {
-    /* The image used */
     background-image: url("../assets/ajit-singh-as3yY6FlKo8-unsplash\ \(1\).jpg");
-  
-    /* Full height */
     width:100%;
     height:100%;
-  
-    /* Center and scale the image nicely */
+    filter: brightness(75%);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    position:fixed;
+    z-index: -1;
   }
+.title {
+  width: auto;
+  color: black;
+  text-align: center;
+  font-family: 'Libre Bodoni', serif;
+}

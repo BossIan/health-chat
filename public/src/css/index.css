@@ -37,7 +37,7 @@ li {
     padding: 10px 20px;
     float: right;
 }
-#search {
-    padding: 10px 20px;
-    float: right;
+.tab-block {
+    width: auto;
+    height: 38px;
 }

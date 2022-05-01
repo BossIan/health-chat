@@ -1,0 +1,4 @@
+var login = sessionStorage.getItem('login') || localStorage.getItem("login");
+if (login == 'false' || login == null) {
+    $('body').append('<div class="modal"><div class="modal-div"><div class="div-placeholder"></div><div class="sign-in-block"><div class="sign-in-cont-block"><div class="sign-in-cont-text">Sign in to continue</div></div><div class="sign-in-desc"><span>To use this feature, you must be signed in.</span><div class="placeholder"></div></div><div class="span-wide-div"><div class="span-div" onclick="window.location.href = \'login.html\';"><span class="span-msg"><span class="span-msg-in">SIGN IN</span></span></div></div></div><div class="div-placeholder"></div></div>');
+}
