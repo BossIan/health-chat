@@ -16,11 +16,24 @@
   h1 {
     text-align: center;
   }
+  .activity-div {
+    display: none;
+  }
+  .selectedblock {
+    display: block;
+  }
+  .activity-block img {
+    float: left;
+    height: 20rem;
+    width: 15rem;
+    object-fit: contain;
+    margin: 10PX;
+  }
   .activity-block {
     width: fit-content;
     height: fit-content;
     background-color: beige;
-    padding-left: 10%;
+    padding-left: 5%;
     padding-right: 10%;
     margin-left: 10%;
     margin-right: 10%;
@@ -28,18 +41,27 @@
     align-items: center;
     display: grid;
   }
-  #yoga img {
-    float: left;
-    max-height: 10rem;
-    margin: 10PX;
+  .meditate-block {
+    display: none;
   }
-  #meditate img {
-    float: right;
-    max-height: 10rem;
-    margin: 10PX;
+  .exercise-block {
+    display: none;
   }
-  #exercise img {
-    float: left;
-    max-height: 10rem;
-    margin: 10PX;
+  .activitiestab {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: wheat
+  }
+  .activitiestabs {
+    padding: 16px;
+    background-color: wheat;
+    border: 0;
+    cursor: pointer;
+  }
+  .selectedtab {
+    background-color: beige;
+  }
+  .activitiestabs:hover {
+    background-color: rgb(206, 218, 105);
   }

@@ -48,7 +48,10 @@ function register() {
     var user = {
         name: $('#unametext').val(),
         email: $('#unametext').val(),
-        password: $('#pswtext').val()
+        password: $('#pswtext').val(),
+        reminders: 'Drink Water',
+        reminderschecked: '',
+        reminderstime: '11:10 PM'
     }
     socket.emit('register', user)
     socket.once('registered already', function () {

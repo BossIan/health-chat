@@ -64,24 +64,196 @@
     <div class="tab-block"></div>
     <div class="activities-block">
         <h1>Activities</h1>
-        <div class="activity-block" id="yoga">
-            <h4>
-            <img src="./src/assets/pineapple.jpg" alt="yoga">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore at numquam minus soluta nisi, explicabo nam adipisci libero cumque alias voluptas! Atque dolores molestias quas aliquid perspiciatis deserunt cumque modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium maiores aut nam magni eligendi ipsum libero cupiditate corrupti, laudantium eius non iste distinctio ipsam vitae odio perspiciatis. Nemo, et veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde distinctio quis molestias quibusdam necessitatibus minima, ut exercitationem, non temporibus molestiae totam velit quas, tempora illum facilis illo ad! Non!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quasi perspiciatis laborum minus repellat facilis, molestiae reiciendis nobis corporis enim eveniet consequatur culpa voluptatem quas, porro inventore natus maxime iusto?
-           </h4>
+        <div class="activitiestab">
+            <button id="yoga-tab" class="activitiestabs selectedtab" onclick="
+                document.getElementById('yoga-tab').classList.add('selectedtab');
+                document.getElementById('yoga-block').classList.add('selectedblock');
+                
+                document.getElementById('exercises-tab').classList.remove('selectedtab');
+                document.getElementById('meditate-tab').classList.remove('selectedtab');
+                document.getElementById('meditate-block').classList.remove('selectedblock');
+                document.getElementById('exercise-block').classList.remove('selectedblock');
+            ">Yoga</button>
+            <button id="meditate-tab" class="activitiestabs" onclick="
+                document.getElementById('meditate-tab').classList.add('selectedtab');
+                document.getElementById('meditate-block').classList.add('selectedblock');
+                
+                document.getElementById('exercises-tab').classList.remove('selectedtab');
+                document.getElementById('yoga-tab').classList.remove('selectedtab');
+                document.getElementById('yoga-block').classList.remove('selectedblock');
+                document.getElementById('exercise-block').classList.remove('selectedblock');
+            ">Meditate</button>
+            <button id="exercises-tab" class="activitiestabs" onclick="
+                document.getElementById('exercises-tab').classList.add('selectedtab');
+                document.getElementById('exercise-block').classList.add('selectedblock');
+                
+                document.getElementById('meditate-tab').classList.remove('selectedtab');
+                document.getElementById('yoga-tab').classList.remove('selectedtab');
+                document.getElementById('meditate-block').classList.remove('selectedblock');
+                document.getElementById('yoga-block').classList.remove('selectedblock');
+           ">Exercise</button>
+          </div>
+          <div id="yoga-block" class="activity-div selectedblock">
+            <div class="activity-block">
+                  <h3>Yoga improves strength, balance and flexibility.
+                    <br><br>
+                    1. Slow movements and deep breathing increase blood flow and warm up muscles, while   holding a pose can build strength. 
+                    <br><br>
+                    2. Yoga helps with back pain relief. 
+                    <br><br>
+                    Yoga is as good as basic stretching for easing pain and improving mobility in people with lower back pain. The American College of Physicians recommends yoga as a first-line treatment for chronic low back pain.
+                    3. Yoga can ease arthritis symptoms. 
+                    <br><br>
+                    Gentle yoga has been shown to ease some of the discomfort of tender, swollen joints for people with arthritis, according to a Johns Hopkins review of 11 recent studies.
+                    <br><br>
+                    4. Yoga benefits heart health. 
+                    Regular yoga practice may reduce levels of stress and body-wide inflammation, contributing to healthier hearts. Several of the factors contributing to heart disease, including high blood pressure and excess weight, can also be addressed through yoga. <br><br>
+                    5. Yoga relaxes you, to help you sleep better.
+                    Research shows that a consistent bedtime yoga routine can help you get in the right mindset and prepare your body to fall asleep and stay asleep. 
+                    <br><br>
+                    6. Yoga can mean more energy and brighter moods.
+                    You may feel increased mental and physical energy, a boost in alertness and enthusiasm, and fewer negative feelings after getting into a routine of practicing yoga.
+                    <br><br>
+                    7. Yoga helps you manage stress. 
+                    According to the National Institutes of Health, scientific evidence shows that yoga supports stress management, mental health, mindfulness, healthy eating, weight loss and quality sleep.
+                    <br><br>
+                    8. Yoga connects you with a supportive community. 
+                    Participating in yoga classes can ease loneliness and provide an environment for group healing and support. Even during one-on-one sessions loneliness is reduced as one is acknowledged as a unique individual, being listened to and participating in the creation of a personalized yoga plan.
+                    <br><br>
+                    9. Yoga promotes better self-care.
+    
+    
+                    </h3>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/treepose.jpg" alt="treepose">
+                Try it: Tree Pose <br>
+                <br>Balance on one foot, while holding the other foot to your calf or above the knee (but never on the knee) at a right angle. Try to focus on one spot in front of you, while you balance for one minute. 
+                <br><br>
+                Get into position. Tree pose often starts from mountain pose (or Tadasana), with both feet planted firmly on the ground and your weight adequately distributed so that you are balanced.
+                Bend one leg at the knee. Choose the leg you are going to fold in first. If your left leg is your standing leg, keep your left foot planted on the ground, and slowly bend in your right leg at the right knee so that the sole of your right foot rests against your left inner thigh (known as the half-lotus position in Bikram yoga). Point the knee of your bent leg outward, away from your body.
+                Lengthen your body. Clasp your hands together in Anjali Mudra (also called the “prayer position”) and raise your arms above your head. In this form, your head, shoulders, pelvis, and left foot should align vertically. The top of your torso should lift slightly, with your tailbone extending towards the ground.
+                Hold and repeat. Hold the pose for as long as necessary, making sure to breathe properly. When you’re ready to switch legs, exhale, and return to mountain pose to start again.
+
+               </h4>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/cat-pose.jpg" alt="Cat-Cow Pose">
+                Try it: Cat-Cow Pose
+                <br><br>
+                Get on all fours, placing your palms underneath your shoulders and your knees underneath your hips. First, inhale, as you let your stomach drop down toward the floor. Then, exhale, as you draw your navel toward your spine, arching your spine like a cat stretching. 
+                <br><br>
+                Begin on your hands and knees in table pose, with a neutral spine. As you inhale and move into cow pose, lift your sit bones upward, press your chest forward and allow your belly to sink.
+                Lift your head, relax your shoulders away from your ears, and gaze straight ahead.
+                As you exhale, come into cat pose while rounding your spine outward, tucking in your tailbone, and drawing your pubic bone forward.
+                Release your head toward the floor — just don’t force your chin to your chest. Most importantly, just relax.
+
+               </h4>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/Dog pose.jpg" alt="Dog Pose">
+                Try it: Downward Dog Pose <br><br>
+                Get on all fours, then tuck your toes under and bring your sitting bones up, so that you make a triangle shape. Keep a slight bend in your knees, while lengthening your spine and tailbone.
+                    <br><br>
+                On a yoga mat, begin in Downward-Facing Dog Pose. To do this, start on all fours and place your hands in front of you on the mat (palms down). Press into your hands and feet, straighten your legs, and raise your hips up towards the sky. Your body will be in an upside-down V position.
+                Next, raise your right leg off the ground and bring your right knee to the back of your right wrist. Then, rotate your right shin so that it’s parallel with the front of your mat.
+                As you bring your right leg to the mat, keep your left leg straight as it reaches the ground.
+                Bring your right knee outward so it’s farther to the right than your hips and ensure your right foot is dorsiflexed (flexed toward the shin). Gently lower your right buttocks towards the ground, but ensure you’re keeping your weight equally distributed between both hips. If this is too difficult, place a folded towel underneath your right buttocks.
+                Place both hands under your shoulders and gently press into the palms of your hands to straighten and elongate your spine. Look straight forward and feel the stretch. At this point, you have achieved Classic Pigeon Pose.
+                Next, take a deep breath and as you exhale, lower your torso over your right leg, and stretch your arms straight in front of you, with your elbows slightly bent. Place your forehead either on a yoga block or on your forearms crossed in front. If this is uncomfortable for you, simply reach forward as far as you’re comfortable.
+                Gently bring your shoulders back away from your ears in a relaxed position.
+                Hold this position for 5–10 slow, deep breaths.
+                Repeat on the other side.
+               </h4>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/Legs-Up-the-Wall Pose.jpg" alt="Legs-Up-the-Wall Pose">
+                Try It: Legs-Up-the-Wall Pose
+                <br><br>
+                Sit with your left side against a wall, then gently turn right and lift your legs up to rest against the wall, keeping your back on the floor and your sitting bones close to the wall. You can remain in this position for 5 to 15 minutes. 
+                    <br><br>
+                Sit with your right side against the wall, with bent knees and your feet drawn in toward your hips.
+                Swing your legs up against the wall as you turn to lie flat on your back.
+                Place your hips against the wall or slightly away.
+                Place your arms in any comfortable position.
+                Stay in this position for up to 20 minutes.
+                To release the pose, gently push yourself away from the wall.
+                Relax on your back for a few moments.
+                Draw your knees into your chest and roll onto your right side.
+                Rest for a few moments before slowly moving into an upright position.
+                    
+               </h4>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/Savasana.jpg" alt="Savasana">
+                Try It: Corpse Pose (Savasana)  <br><br>
+                Lie down with your limbs gently stretched out, away from the body, with your palms facing up. Try to clear your mind while breathing deeply. You can hold this pose for 5 to 15 minutes.
+                    <br><br>
+                Sit down normally on the floor. (If you are not used to sitting on the floor or you are uncomfortable, then keep one thick folded blanket on the floor for firm and flat base for sitting). Stretch out your legs ahead in front.
+                Now cross your legs and broaden your knees, in order that you can slip your both foot under the opposite knee.
+                After that you have to bend your knees along with fold your legs.
+                Keep your feet loose, in order that the external edges lay on the floor and the inner curves are settled beneath the inverse leg.
+                Your thighs and crossed legs ought to frame a little triangle. Keep some space between your feet and pelvis.
+                Now sit with your buttock in a neutral position. (For this, you have to press your hands opposing the ground and lift your sitting bones a bit). Attempt to hold for a breath or two and after that gradually bring down yourself back on to the floor.
+                Balance your tail bone and pubic bone in a manner that they are equidistant from the floor.
+                Keep your hands on your knees with palm facing down and expand your tailbone against the floor. (You can keep your hands in Gyan mudra).
+                    
+               </h4>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/Child’s Pose.jpg" alt="Child’s Pose">
+                Try It: Child’s Pose
+                <br><br>
+                Come onto your hands and knees, with your hands a tiny bit in front of your shoulders and your knees directly below your hips. Spread your palms, rooting down through all four corners of your hands, and turn your toes under.
+                Exhale and lift your knees from the floor, at first keeping your knees slightly bent and your heels lifted off the floor. Lengthen your tailbone away from the back of your pelvis, lift the sitting bones toward the ceiling, and draw your inner legs from your inner ankles up through your groins.
+                On an exhalation, push your top thighs back and stretch your heels toward the floor. Straighten your knees without locking them.
+                Firm your outer arms and press the bases of your index fingers actively into the floor. Lift along your inner arms from the wrists to the tops of the shoulders. Firm your shoulder blades against your back, then widen them and draw them toward your tailbone. Keep your head between your upper arms.
+                Stay in the pose for 10 or more breaths, then bend your knees on an exhalation and lower yourself into Child’s Pose
+
+               </h4>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/Pidgeon Pose.jpg" alt="Pidgeon Pose">
+                Try It: Pidgeon Pose
+                <br><br>
+                Begin on your hands and knees. Center your breath, and begin to let your thoughts slow down. Turn your awareness inward.
+                Spread your knees wide apart while keeping your big toes touching. Rest your buttocks on your heels.
+                Those with very tight hips can keep their knees and thighs together.
+                Sit up straight and lengthen your spine up through the crown of your head.
+                On an exhalation, bow forward, draping your torso between your thighs. Your heart and chest should rest between or on top of your thighs. Allow your forehead to come to the floor.
+                Keep your arms long and extended, palms facing down. Press back slightly with your hands to keep your buttocks in contact with your heels. Lengthen from your hips to your armpits, and then extend even further through your fingertips.
+                For deeper relaxation, bring your arms back to rest alongside your thighs with your palms facing up. Completely relax your elbows.
+                Let your upper back broaden. Soften and relax your lower back. Allow all tension in your shoulders, arms, and neck to drain away.
+                Keep your gaze drawn inward with your eyes closed.
+                Hold for up to a minute or longer, breathing softly.
+                To release the pose, gently use your hands to walk your torso upright to sit back on your heels.
+                Baby pigeon pose
+
+               </h4>
+            </div>
+            <div class="activity-block">
+                <h4>
+                <img src="./src/assets/Mountain pose.jpg" alt="Mountain pose">
+                Try It: Mountain pose
+                <br><br>
+                Stand with the feel parallel, a few inches apart. (Alternately you may stand with the bases of your big toes touching, heels slightly apart.
+                Lift and spread your toes and the balls of your feet, then lay them softly back down on the floor. Rock gently back and forth and side to side. Gradually reduce this swaying to a standstill, with your weight balanced evenly across your feet. Feel the energy draw from your feet up through your core.
+                Without pushing your lower front ribs forward, lift the top of your sternum straight toward the ceiling. Widen your collarbones. Allow your shoulder blades to draw toward each other and down the back, away from the ears.
+                Let your arms relax beside your torso, palms facing in or forward.
+                Balance the crown of your head directly over the center of your pelvis, with the underside of your chin parallel to the floor, throat soft, and tongue wide and flat on the floor of your mouth. Soften your eyes. Breathe.
+
+               </h4>
+            </div>
         </div>
-        <div class="activity-block" id="meditate">
-            <h4>
-            <img src="./src/assets/pineapple.jpg" alt="yoga">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore at numquam minus soluta nisi, explicabo nam adipisci libero cumque alias voluptas! Atque dolores molestias quas aliquid perspiciatis deserunt cumque modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium maiores aut nam magni eligendi ipsum libero cupiditate corrupti, laudantium eius non iste distinctio ipsam vitae odio perspiciatis. Nemo, et veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde distinctio quis molestias quibusdam necessitatibus minima, ut exercitationem, non temporibus molestiae totam velit quas, tempora illum facilis illo ad! Non!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quasi perspiciatis laborum minus repellat facilis, molestiae reiciendis nobis corporis enim eveniet consequatur culpa voluptatem quas, porro inventore natus maxime iusto?
-           </h4>
-        </div>
-        <div class="activity-block" id="exercise">
-            <h4>
-            <img src="./src/assets/pineapple.jpg" alt="yoga">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore at numquam minus soluta nisi, explicabo nam adipisci libero cumque alias voluptas! Atque dolores molestias quas aliquid perspiciatis deserunt cumque modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium maiores aut nam magni eligendi ipsum libero cupiditate corrupti, laudantium eius non iste distinctio ipsam vitae odio perspiciatis. Nemo, et veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde distinctio quis molestias quibusdam necessitatibus minima, ut exercitationem, non temporibus molestiae totam velit quas, tempora illum facilis illo ad! Non!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quasi perspiciatis laborum minus repellat facilis, molestiae reiciendis nobis corporis enim eveniet consequatur culpa voluptatem quas, porro inventore natus maxime iusto?
-           </h4>
-        </div>
+        <div id="meditate-block"></div>
+        <div id="exercise-block"></div>
     </div>
     <script src="src/index.js"></script>
     <script src="src/nlp.js"></script>

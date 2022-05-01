@@ -30,6 +30,7 @@
   .card {
     box-shadow: 0 4px 8px 0 black;
     background-color: beige ;
+    height: 600px
   }
   .card img {
     width: 100%;

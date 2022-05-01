@@ -6,6 +6,8 @@
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    position:fixed;
+    z-index: -1;
   }
 .modal {
   background-color: rgba(0,0,0,0.502);
@@ -66,4 +68,107 @@
 .span-msg-in {
   display: inline-block;
   margin: 8px;
+}
+
+.reminders-block ul {
+  margin: 0;
+  padding: 0;
+}
+.reminders-block {
+  width: 70%;
+  height: 100%;
+  padding-inline: 15%;
+  background-color:rgba(0,0,0,0.502);
+}
+.reminders-block ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  user-select: none;
+}
+.reminders-block ul li:hover {
+  background: #ddd;
+}
+.reminders-block ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+.reminders-block ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+.header {
+  background-color: #dd7b75;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#titleInput {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 60%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+#timeInput {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 20%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+.addBtn {
+  padding: 10px;
+  width: 12%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  font-size: 16px;
+  cursor: pointer;
+}
+.AmPm {
+  float: left;
+  width: 5%;
+  padding: 10px;
+  color: #555;
+  padding-bottom: 11px;
+  border: 0;
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+.time {
+  position: absolute;
+  right: 50px;
 }
