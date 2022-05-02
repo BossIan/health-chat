@@ -12,6 +12,9 @@ if (login == 'true') {
 }
 var topnav = document.getElementsByTagName("ul")
 window.onscroll = function () {
+    if (screen.width <= 600) {
+        return
+    }
     if (document.body.scrollTop == 0) {
         topnav[0].style.background='transparent';
     } else {

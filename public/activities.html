@@ -19,6 +19,14 @@
         <li><a class="tabs" href="therapy.html">Therapy</a></li>
         <li><a class="tabs" href="reminders.html">Reminders</a></li>
         <li><a class="tabs" id='login' href="login.html">Login</a></li>
+        <li class="icon"><a class="tabs" onclick="var x = document.getElementsByClassName('tab');
+            if (x[0].className == 'tab') {
+                x[0].className += ' responsive';
+            } else {
+                x[0].className = 'tab';
+            }">
+            <i class="fa fa-bars"></i>
+          </a></li>
     </ul>
     <div class="chat-bar-collapsible"> 
         <button id="chat-button" type="button" class="collapsible">Chat</button>

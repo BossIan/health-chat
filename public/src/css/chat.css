@@ -52,7 +52,9 @@
 }
 
 .outer-container {
-    min-height: 500px;
+    min-height: 50vh;
+    height: 300px;
+    max-height: 75vh;
     bottom: 0%;
     position: relative;
 }

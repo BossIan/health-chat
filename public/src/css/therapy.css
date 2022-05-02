@@ -21,9 +21,12 @@
   }
   
   @media screen and (max-width: 600px) {
+    .row {
+      display: block;
+      width: auto;
+     }
     .column {
       width: 100%;
-      display: block;
     }
   }
   
