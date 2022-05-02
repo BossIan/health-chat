@@ -43,13 +43,16 @@ function newList() {
     socket.emit('newList', newlis)
     $('#reminders-list').append('<li>'+ $('#titleInput').val() +'<span class="close">×</span> <span class="time">'+ time + ' ' + AmPm +'</span></li>')
     var close = document.getElementsByClassName("close");
-      close[close.length -1].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-        var logindata = $('#login').text()
-        var userdata = [ logindata , close.length -1]
-          socket.emit('close', userdata)
-        }
+    for (let i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+      this.classList.remove('close')
+      var logindata = $('#login').text()
+      var userdata = [ logindata , i]
+        socket.emit('close', userdata)
+      }
+    }
       let list = $('#reminders-list li')
       for (let i = 0; i < list.length; i++) {
         list[i].onclick = function() {
@@ -76,6 +79,7 @@ function newList() {
       close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
+      this.classList.remove('close')
       var logindata = $('#login').text()
       var userdata = [ logindata , i]
         socket.emit('close', userdata)

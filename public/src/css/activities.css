@@ -19,10 +19,23 @@
   .activity-div {
     display: none;
   }
+  
   .selectedblock {
     display: block;
   }
-  .activity-block img {
+  #meditate-block img {
+    float:none;
+    max-width: 80%;
+    margin-inline: 10%;
+  }
+  #yoga-block img {
+    float: left;
+    height: 20rem;
+    width: 15rem;
+    object-fit: contain;
+    margin: 10PX;
+  }
+  #exercise-block img {
     float: left;
     height: 20rem;
     width: 15rem;
@@ -40,9 +53,6 @@
     margin-bottom: 5%;
     align-items: center;
     display: grid;
-  }
-  .meditate-block {
-    display: none;
   }
   .exercise-block {
     display: none;
