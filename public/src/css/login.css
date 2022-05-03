@@ -26,6 +26,7 @@ body {
     flex-shrink: 0;
     flex-basis: auto;
     width: 25%;
+    min-width: 400px;
     background-color:	rgb(220,220,220, 0.7);
 }
 .login-container {
@@ -66,4 +67,10 @@ input[type=text], input[type=password] {
       width: 100%;
       padding: 0;
     }
+  }
+  input , button, label{
+    font-family: 'Quicksand', sans-serif;
+  }
+  b {
+    font-family: 'Comfortaa', cursive;
   }

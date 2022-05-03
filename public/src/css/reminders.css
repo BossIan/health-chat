@@ -173,3 +173,9 @@
   position: absolute;
   right: 50px;
 }
+h2 {
+  font-family: 'Comfortaa', cursive;
+}
+input, li , span{
+  font-family: 'Quicksand', sans-serif;
+}

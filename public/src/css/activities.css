@@ -75,3 +75,9 @@
   .activitiestabs:hover {
     background-color: rgb(206, 218, 105);
   }
+  h1 {
+    font-family: 'Comfortaa', cursive;
+  }
+  h3 ,h4{
+    font-family: 'Quicksand', sans-serif;
+  }

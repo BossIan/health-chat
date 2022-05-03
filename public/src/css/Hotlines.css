@@ -59,3 +59,12 @@
   .button:hover {
     background-color: #555;
   }
+  h2 {
+    font-family: 'Comfortaa', cursive;
+    font-size: larger;
+  }
+  p {
+    
+    font-family: 'Quicksand', sans-serif;
+    font-size: small;
+  }

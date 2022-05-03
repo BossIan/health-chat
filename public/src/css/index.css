@@ -23,6 +23,7 @@ body {
 }
 
 .tabs {
+  font-family: 'Comfortaa', cursive;
     padding: 10px 20px;
     float: left;
     text-align: center;

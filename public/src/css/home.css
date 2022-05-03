@@ -18,3 +18,11 @@
   font-size:3vw;
   line-height: 15vw;
 }
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+}
+h2 {
+  font-size: 2.4vw;
+  font-weight:bold;
+}
