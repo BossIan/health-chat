@@ -51,6 +51,7 @@ function newList() {
       var logindata = $('#login').text()
       var userdata = [ logindata , i]
         socket.emit('close', userdata)
+        location.reload();
       }
     }
       let list = $('#reminders-list li')
@@ -83,6 +84,7 @@ function newList() {
       var logindata = $('#login').text()
       var userdata = [ logindata , i]
         socket.emit('close', userdata)
+        location.reload();
       }
     }
     let list = $('#reminders-list li')

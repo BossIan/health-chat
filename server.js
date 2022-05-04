@@ -59,7 +59,6 @@ io.on('connection', function (socket) {
           dbdata[0].reminders.splice(data[1], 1)
           dbdata[0].reminderschecked.splice(data[1], 1)
           dbdata[0].reminderstime.splice(data[1], 1)
-          console.log(data[1] + ' ' + dbdata[0].reminders);
             dbdata[0].save()
             .catch((error) => {
               //When there are errors We handle them here
