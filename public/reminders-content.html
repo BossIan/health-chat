@@ -1,12 +1,14 @@
 <div class="header">
     <h2>My To Do List</h2>
-    <input type="text" id="titleInput" placeholder="Title...">
-    <input type="text" id="timeInput" placeholder="Time...">
-    <select class="AmPm">
-        <option value="AM">AM</option>
-        <option value="PM">PM</option>
-      </select>
-    <span onclick="newList()" class="addBtn">Add</span>
+    <div class="inputs">
+      <input type="text" id="titleInput" placeholder="Title...">
+      <input type="text" id="timeInput" placeholder="Time...">
+      <select class="AmPm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        <span onclick="newList()" class="addBtn">Add</span>
+      </div>
   </div>
   
   <ul id="reminders-list">

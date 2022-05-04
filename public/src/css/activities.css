@@ -11,10 +11,10 @@
   }
   .activities-block {
     background-color:rgb(255, 228, 196, 0.6);
-    padding-top: 1px;
   }
   h1 {
     text-align: center;
+    text-shadow: 4px 4px rgb(216, 195, 157);
   }
   .activity-div {
     display: none;
@@ -42,7 +42,13 @@
     object-fit: contain;
     margin: 10PX;
   }
+  .title {
+    padding: 20px;
+    background-color: rgb(255, 228, 196, 0.6);
+    margin-bottom: 20px;
+  }
   .activity-block {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.377);
     width: fit-content;
     height: fit-content;
     background-color: beige;
@@ -61,12 +67,12 @@
     width: auto;
     display: flex;
     justify-content: center;
-    background-color: wheat
   }
   .activitiestabs {
     padding: 16px;
     background-color: wheat;
-    border: 0;
+    border-bottom: 0;
+    border-color: aliceblue;
     cursor: pointer;
   }
   .selectedtab {
