@@ -1,3 +1,9 @@
+:root {
+  --light: rgba(172, 220, 212, 0.541);
+  --lightneutral: rgb(23,187,185);
+  --neutral: rgb(0,142,168);
+  --dark: rgb(0,86,93);
+}
 html {
     scroll-behavior: smooth;
 }
@@ -31,7 +37,7 @@ body {
     color: white;
 }
 .tabs:hover {
-    background-color: #111;
+    background-color: var(--neutral);
   }
   
 #login {
@@ -51,6 +57,9 @@ body {
       float: right;
       display: block;
     }
+    .tab {
+      background:  var(--dark);
+    }
   }
   
 @media screen and (max-width: 600px) {
@@ -60,6 +69,6 @@ body {
       width: 100%;
     }
     .tab.responsive {
-        background:  black;
+        background:  var(--dark);
     }
   }

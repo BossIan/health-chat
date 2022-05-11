@@ -18,6 +18,6 @@ window.onscroll = function () {
     if (document.body.scrollTop == 0) {
         topnav[0].style.background='transparent';
     } else {
-        topnav[0].style.background='#575757';
+        topnav[0].style.background='var(--dark)';
     }
 }

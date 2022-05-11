@@ -16,7 +16,7 @@
   .column {
     flex: 33.33%;
     margin-bottom: 16px;
-    padding: 0 8px;
+    padding-inline: 2px;
     
   }
   
@@ -32,7 +32,7 @@
   
   .card {
     box-shadow: 0 4px 8px 0 black;
-    background-color: beige ;
+    background-color: var(--lightneutral) ;
     height: 600px
   }
   .card img {
@@ -43,9 +43,6 @@
   .container {
     padding: 0 16px;
   }
-  .title {
-    color: grey;
-  }
   .button {
     border: none;
     outline: 0;
@@ -55,9 +52,6 @@
     text-align: center;
     cursor: pointer;
     width: 100%;
-  }
-  .button:hover {
-    background-color: #555;
   }
   h2 {
     font-family: 'Comfortaa', cursive;

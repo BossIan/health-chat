@@ -10,11 +10,11 @@
     z-index: -1;
   }
   .activities-block {
-    background-color:rgb(255, 228, 196, 0.6);
+    background-color:var(--light);
   }
   h1 {
     text-align: center;
-    text-shadow: 4px 4px rgb(216, 195, 157);
+    text-shadow: 4px 4px var(--neutral);
   }
   .activity-div {
     display: none;
@@ -44,18 +44,17 @@
   }
   .title {
     padding: 20px;
-    background-color: rgb(255, 228, 196, 0.6);
+    background-color: var(--lightneutral);
     margin-bottom: 20px;
   }
   .activity-block {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.377);
     width: fit-content;
     height: fit-content;
-    background-color: beige;
+    background-color: var(--lightneutral);
     padding-left: 5%;
     padding-right: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-inline: 5%;
     margin-bottom: 5%;
     align-items: center;
     display: grid;
@@ -70,20 +69,34 @@
   }
   .activitiestabs {
     padding: 16px;
-    background-color: wheat;
-    border-bottom: 0;
-    border-color: aliceblue;
+    background-color: var(--lightneutral);
+    border-color: var(--light);
     cursor: pointer;
   }
   .selectedtab {
-    background-color: beige;
+    border-bottom: 0;
+    background-color: var(--lightneutral);
   }
   .activitiestabs:hover {
-    background-color: rgb(206, 218, 105);
+    background-color: var(--light);
   }
   h1, button {
     font-family: 'Comfortaa', cursive;
   }
   h3 ,h4{
     font-family: 'Quicksand', sans-serif;
+  }
+
+  @media screen and (max-width: 600px) {
+    .activity-block { 
+      margin-inline: 0;
+      width: 100%;
+      padding-inline: 0;
+    }
+    .activity-block h3, h4{ 
+      margin-inline: 10px
+    }
+    .activities-block {
+      width: 100%;
+    }
   }
