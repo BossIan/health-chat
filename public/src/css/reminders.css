@@ -187,7 +187,6 @@
 }
 h2 {
   font-family: 'Comfortaa', cursive;  
-  text-shadow: 3px 3px var(--dark);
 }
 input, li , span{
   font-family: 'Quicksand', sans-serif;
