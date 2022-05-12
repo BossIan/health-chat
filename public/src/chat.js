@@ -63,9 +63,11 @@ function getResponse() {
     if (document.getElementById('bot-chat').style.display == 'none') {
         socket.emit('send message' , userText)
         $('#chat-chat').append(userHtml)
+        document.getElementById('chat-bar-bottom').scrollIntoView(true)
         return
     }
     $('#bot-chat').append(userHtml)
+    document.getElementById('chat-bar-bottom').scrollIntoView(true)
     setTimeout(() => {
         getHardResponse(userText)
     }, 1000)
@@ -82,4 +84,5 @@ $('#textInput').keypress(function (a) {
 socket.on('message sent', function (message) {
     let userHtml = '<p class="botText"><span>' + message + '</span></p>'
     $('#chat-chat').append(userHtml)
+    document.getElementById('chat-bar-bottom').scrollIntoView(true)
 })
