@@ -1,6 +1,6 @@
 :root {
   --light: rgba(172, 220, 212, 0.541);
-  --lightneutral: rgb(23,187,185);
+  --lightneutral: #59788E;
   --neutral: rgb(0,142,168);
   --dark: rgb(0,86,93);
 }
@@ -22,6 +22,7 @@ body {
     top:0;
     width:100%;
     padding: 0;
+    
 }
 
 .tab li {

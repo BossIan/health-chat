@@ -9,6 +9,10 @@
     position:fixed;
     z-index: -1;
   }
+  body {
+    
+    color: white;
+  }
   .row {
    display: flex;
    width: auto;
