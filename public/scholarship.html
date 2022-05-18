@@ -389,4 +389,190 @@
             </div>
         </div>
     </div> -->
-<div class="scholarship-block"></div>
+<div class="scholarship-block">
+    <form onsubmit="validateForm()">
+        <table>
+            <tbody>
+              <tr>
+                <td class="table-header" colspan="5">PERSONAL INFORMATION</td>
+              </tr>
+              <tr>
+                <td rowspan="2">1. Name</td>
+                <td><input type="text" id="lastname" required></td>
+                <td><input type="text" id="firstname" required></td>
+                <td><input type="text" id="middlename" required></td>
+                <td><input type="text" id="maidenname" required></td>
+              </tr>
+              <tr>
+                <td>(Last Name)<br>put extension, if any: i.e Jr., III</td>
+                <td>(First Name)</td>
+                <td>(Middle Name)</td>
+                <td>Maiden Name<br>(for Married Women)</td>
+              </tr>
+              <tr>
+                  <td>2. Date of Birth (dd/mm/yyyy)</td>
+                  <td><input type="date" name="" id="dateofbirth" required></td>
+                  <td rowspan="3">9. Present Address<br>10. Zip Code</td>
+                <td colspan="2" rowspan="2"><input type="text" id="presentaddress" required></td>
+
+              <tr>
+                <td>3. Place of Birth</td>
+                <td><input type="text" id="placeofbirth" required></td>
+              </tr>
+              <tr>
+                <td>4. Sex</td>
+                <td id="radio1">
+                    <input type="radio" id="male" name="gender" class="radio" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender"class="radio" required>
+                    <label for="female">Female</label>
+                </td>
+                <td colspan="2"><input type="text" id="presentzipcode" required></td>
+              </tr>
+              <tr>
+                <td rowspan="3">5. Civil Status</td>
+                <td rowspan="3">
+                    <input type="radio" name="civil" id="single" class="radio" required>
+                    <label for="single">Single</label>
+                    <input type="radio" name="civil" id="married" class="radio" required>
+                    <label for="married">Married</label>
+                    <input type="radio" name="civil" id="annulled" class="radio" required>
+                    <label for="annulled">Annulled</label>
+                    <input type="radio" name="civil" id="Widowed" class="radio" required>
+                    <label for="Widowed">Widowed</label>
+                    <input type="radio" name="civil" id="Separated" class="radio" required>
+                    <label for="Separated">Separated</label>
+                    <input type="radio" name="civil" id="Others" class="radio" required>
+                    <label for="Others">Others</label>
+                </td>
+                <td rowspan="3">9. Permanent Address<br>10. Zip Code</td>
+                <td colspan="2" rowspan="2"><input type="text" id="permanentaddress" required></td></td>
+              </tr>
+              <tr>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="text" id="permanentzipcode" required></td>
+              </tr>
+              <tr>
+                <td>6. Citizenship</td>
+                <td><input type="text" id="citizenship" required></td>
+                <td>11. Name of School Last Attended</td>
+                <td colspan="2"><input type="text" id="schoolAttended" required></td>
+              </tr>
+              <tr>
+                <td>7. Mobile Number</td>
+                <td><input type="text" id="mobileNumber" required></td>
+                <td rowspan="2">12. School Address</td>
+                <td colspan="2" rowspan="2"><input type="text" id="schoolAddress" required></td>
+              </tr>
+              <tr>
+                <td>8. E-mail Address</td>
+                <td><input type="text" id="email" required></td>
+              </tr>
+              <tr>
+                <td>13. School Sector:</td>
+                <td><input type="text" id="schoolSector" required></td>
+                <td>15. Type of Disability (if applicable)</td>
+                <td colspan="2"><input type="text" id="disability" required></td>
+              </tr>
+              <tr>
+                <td>14. Highest Attained Grade/Year Level</td>
+                <td><input type="text" id="gradelevel" required></td>
+                <td>16. IP affiliation (if applicable)</td>
+                <td colspan="2"><input type="text" id="ipAffiliation" required></td>
+              </tr>
+              <tr>
+                <td colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="5" class="table-header">FAMILY BACKGROUND</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Father: 
+                <input type="radio"  class="radio" name="fatherstatus" id="Living" required>
+                <label for="Living">Living</label>
+                <input type="radio"  class="radio" name="fatherstatus" id="Deceased" required>
+                <label for="Deceased">Deceased</label>
+            </td>
+            </td>
+                <td>Mother: 
+                    <input type="radio"  class="radio" name="motherstatus" id="Living" required>
+                    <label for="Living">Living</label>
+                    <input type="radio"  class="radio" name="motherstatus" id="Deceased" required>
+                    <label for="Deceased">Deceased</label></td>
+                <td colspan="2" style="text-align: center;">Legal Guardian</td>
+              </tr>
+              <tr>
+                <td>17. Name</td>
+                <td><input type="text" id="fatherName" required></td>
+                <td><input type="text" id="motherName" required></td>
+                <td colspan="2"><input type="text" id="guardianName" required></td>
+              </tr>
+              <tr>
+                <td>18. Address</td>
+                <td><input type="text" id="fatherAddress" required></td>
+                <td><input type="text" id="motherAddress" required></td>
+                <td colspan="2"><input type="text" id="guardianAddress" required></td>
+              </tr>
+              <tr>
+                <td>19. Contact Number</td>
+                <td><input type="text" id="fatherContact" required></td>
+                <td><input type="text" id="motherContact" required></td>
+                <td colspan="2"><input type="text" id="guardianContact" required></td>
+              </tr>
+              <tr>
+                <td>20. Occupation</td>
+                <td><input type="text" id="fatherOccupation" required></td>
+                <td><input type="text" id="motherOccupation" required></td>
+                <td colspan="2"><input type="text" id="guardianOccupation" required></td>
+              </tr>
+              <tr>
+                <td>21. Name of Employer</td>
+                <td><input type="text" id="fatherEmployerName" required></td>
+                <td><input type="text" id="motherEmployerName" required></td>
+                <td colspan="2"><input type="text" id="guardianEmployerName" required></td>
+              </tr>
+              <tr>
+                <td>22. Employer Address</td>
+                <td><input type="text" id="fatherEmployerAddress" required></td>
+                <td><input type="text" id="motherEmployerAddress" required></td>
+                <td colspan="2"><input type="text" id="guardianEmployerAddress" required></td>
+              </tr>
+              <tr>
+                <td>23. Highest Educational Attainment</td>
+                <td><input type="text" id="fatherEducation" required></td>
+                <td><input type="text" id="motherEmployerAddress" required></td>
+                <td colspan="2"><input type="text" id="guardianEducation" required></td>
+              </tr>
+              <tr>
+                <td>24. Total Parents Taxable Income</td>
+                <td><input type="text" id="fatherIncome" required></td>
+                <td><input type="text" id="motherIncome" required></td>
+                <td colspan="2"><input type="text" id="guardianIncome" required></td>
+              </tr>
+              <tr>
+                <td colspan="5">25. Is your family a beneficiary of the DSWD's pantawid Pamilyang Pilipino Program (4Ps)? <input type="radio" class="radio" id="yes" name="dswd"><label for="yes">Yes</label><input type="radio" name="dswd" id="no" class="radio"><label for="no">No</label></td>
+              </tr>
+              <tr>
+                <td colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="1">26. School Intended to enroll or enrolled in:<br>27. School Address<br> 28. Type of School:<br> 29. Degree Program<br>30. Are you enjoying other sources of educational/financial assistance? </td>
+                <td colspan="4"><input type="text" id="schoolEnroll" required><br><input type="text" id="schoolAddress"required><br><input type="radio" name="typeOfSchool" id="public" class="radio"required><label for="public">Public</label><input type="radio" name="typeOfSchool" id="private" class="radio"required><label for="private">private</label><br><input type="text" id="degree"required><br><input type="radio" name="enjoyingOther" id="yes0" class="radio"required><label for="yes0">Yes</label><input type="radio" name="enjoyingOther" id="no0" class="radio"required><label for="no0">No</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5">I hereby certify that foregoing statements are true and correct. Any misinformation or witholding of information will automatically disqualify me from the CHED Scholarship Program. I am willing to refund the financial benefits received if such information is discovered after acceptance of the award. <br> <br> I hereby express my consent for the Commission on Higher Education to collect, record, organize, update or modify, retrieve, consult, use, consolidate, block, erase or destruct my personal data as part of my information. I hereby affirm my right to be informed, object to processing, access and rectify, suspend or withdraw my personal data and be indemnified in case of damages pursuant to the provisions of the Republic Act No. 10173 of the Philippines, Data Privacy Act of 2012 and its corresponding Implementing Rules and Regulations.
+                </td>
+              </tr>
+              <tr>
+                  <td colspan="1">(Signature over Printed Name of Applicant)</td>
+                  <td colspan="4"><input type="text" id="signature"></td>
+              </tr>
+              <tr>
+                <td colspan="1">Date Accomplished</td>
+                <td colspan="4"><input type="text" id="dateAccomplished"></td>
+              </tr>
+            </tbody>
+            </table>

@@ -55,7 +55,8 @@ function register() {
         password: $('#pswtext').val(),
         reminders: 'Drink Water',
         reminderschecked: '',
-        reminderstime: '11:10 PM'
+        reminderstime: '11:10 PM',
+        admin: true
     }
     socket.emit('register', user)
     socket.once('registered already', function () {

@@ -9,99 +9,32 @@
     position:fixed;
     z-index: -1;
   }
-  body {
-    
-    color: white;
+  .scholarship-block {
+    font-family:sans-serif;
+    background-color: white;
+    border: 3px solid black;
+    padding-bottom: 50px;
   }
-  .activities-block {
-    background-color:var(--light);
-  }
-  h1 {
+  h3 {
     text-align: center;
-    text-shadow: 4px 4px var(--neutral);
   }
-  .activity-div {
-    display: none;
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid;
   }
-  
-  .selectedblock {
-    display: block;
+  .table-header {
+    text-align: center;
+    font-weight: bold;
   }
-  #meditate-block img {
-    float:none;
-    max-width: 80%;
-    margin-inline: 10%;
+  table input{
+    border: 0;
+    width: 100%;
+    padding: 0;
+    height: 1rem;
   }
-  #yoga-block img {
-    float: left;
-    height: 20rem;
-    width: 15rem;
-    object-fit: contain;
-    margin: 10PX;
+  .radio {
+    width: 15%;
   }
-  #exercise-block img {
-    float: left;
-    height: 20rem;
-    width: 15rem;
-    object-fit: contain;
-    margin: 10PX;
-  }
-  .title {
-    padding: 20px;
-    background-color: var(--lightneutral);
-    margin-bottom: 20px;
-  }
-  .activity-block {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.377);
-    width: fit-content;
-    height: fit-content;
-    background-color: var(--lightneutral);
-    padding-left: 5%;
-    padding-right: 10%;
-    margin-inline: 5%;
-    margin-bottom: 5%;
-    align-items: center;
-    display: grid;
-  }
-  .exercise-block {
-    display: none;
-  }
-  .activitiestab {
-    width: auto;
-    display: flex;
-    justify-content: center;
-  }
-  .activitiestabs {
-    color: white;
-    padding: 16px;
-    background-color: var(--lightneutral);
-    border-color: var(--light);
-    cursor: pointer;
-  }
-  .selectedtab {
-    border-bottom: 0;
-    background-color: var(--lightneutral);
-  }
-  .activitiestabs:hover {
-    background-color: var(--light);
-  }
-  h1, button {
-    font-family: 'Comfortaa', cursive;
-  }
-  h3 ,h4{
-    font-family: 'Quicksand', sans-serif;
-  }
-
-  @media screen and (max-width: 600px) {
-    .activity-block { 
-      margin-inline: 0;
-      width: 100%;
-      padding-inline: 0;
-    }
-    .activity-block h3, h4{ 
-      margin-inline: 10px
-    }
-    .activities-block {
-      width: 100%;
-    }
+  #radio1 {
+    text-align: center;
   }
