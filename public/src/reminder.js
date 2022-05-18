@@ -1,6 +1,6 @@
 var login = sessionStorage.getItem('login') || localStorage.getItem("login");
 if (login == 'false' || login == null) {
-    $('body').append('<div class="modal"><div class="modal-div"><div class="div-placeholder"></div><div class="sign-in-block"><div class="sign-in-cont-block"><div class="sign-in-cont-text">Sign in to continue</div></div><div class="sign-in-desc"><span>To use this feature, you must be signed in.</span><div class="placeholder"></div></div><div class="span-wide-div"><div class="span-div" onclick="window.location.href = \'login.html\';"><span class="span-msg"><span class="span-msg-in">SIGN IN</span></span></div></div></div><div class="div-placeholder"></div></div>');
+    $('body').append('<div class="modal"><div class="modal-div"><div class="div-placeholder"></div><div class="sign-in-block"><div class="sign-in-cont-block"><div class="sign-in-cont-text">Sign in to continue</div></div><div class="sign-in-desc"><span>To use this feature, you must be signed in.</span><div class="placeholder"></div></div><div class="span-wide-div"><div class="span-div" onclick="window.location.href = \'\';"><span class="span-msg"><span class="span-msg-in">SIGN IN</span></span></div></div></div><div class="div-placeholder"></div></div>');
 } 
 else {
     $('.reminders-block').load("./reminders-content.html")
@@ -51,7 +51,9 @@ function newList() {
       var logindata = $('#login').text()
       var userdata = [ logindata , i]
         socket.emit('close', userdata)
-        location.reload();
+        setTimeout(function(){
+          $('.contents').load('./reminders.html')
+        }, 500)
       }
     }
       let list = $('#reminders-list li')
@@ -69,7 +71,7 @@ function newList() {
         }
     }
     socket.emit('reminders', $('#login').text())
-    socket.on('remindersSend', function (dbdata) {
+    socket.once('remindersSend', function (dbdata) {
         data = dbdata[0]
         for (let i = 0; i < data.reminders.length; i++) {
             $('#reminders-list').append('<li class="'+ data.reminderschecked[i] + '">'+ data.reminders[i] +'<span class="close">×</span> <span class="time">' + data.reminderstime[i] +'</span></li>')
@@ -84,7 +86,9 @@ function newList() {
       var logindata = $('#login').text()
       var userdata = [ logindata , i]
         socket.emit('close', userdata)
-        location.reload();
+        setTimeout(function(){
+            $('.contents').load('./reminders.html')
+        }, 500)
       }
     }
     let list = $('#reminders-list li')

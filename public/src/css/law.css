@@ -1,0 +1,30 @@
+.bg-image {
+    background-image: url("../assets/pexels-quang-nguyen-vinh-3872150.jpg");
+    width:100%;
+    height:100%;
+    filter: saturate(75%) brightness(90%) blur(5px);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position:fixed;
+    z-index: -1;
+  }
+  .contents {
+    background-color:var(--light);
+    padding-bottom: 20px;
+  }
+  .law-block {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.377);
+        width: fit-content;
+        height: fit-content;
+        background-color: var(--lightneutral);
+        padding-left: 5%;
+        padding-right: 10%;
+        margin-inline: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+        display: grid;
+  }
+  h1 {
+      text-align: center;
+  }

@@ -19,14 +19,18 @@ function login() {
     var data = {
         name: $('#unametext').val(),
         email: $('#unametext').val(),
-        password: $('#pswtext').val()
+        password: $('#pswtext').val(),
+        admin: false
     } 
     socket.emit('login' , data)
-    socket.once('login success' ,function () {
+    socket.once('login success' ,function (data) {
         storage.setItem("login", "true");
         storage.setItem("email", $('#unametext').val());
         $('#login').text(storage.getItem("email"))
         jQuery(this).prev("login").attr("id","email");
+        if (data) {
+            storage.setItem("admin", "true");
+        }
         window.location.href = '/';
     })
     socket.once('login failed' ,function () {
@@ -59,7 +63,7 @@ function register() {
     })
     socket.once('register successful', function () {
         alert('Returning to Login')
-        window.location.href = 'login.html';
+        window.location.href = '';
     })
 }
 function ValidateEmail(input) {

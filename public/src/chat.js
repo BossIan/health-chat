@@ -86,3 +86,23 @@ socket.on('message sent', function (message) {
     $('#chat-chat').append(userHtml)
     document.getElementById('chat-bar-bottom').scrollIntoView(true)
 })
+$('#chatid').click(function() {
+    socket.emit('find match')
+    let userHtml = '<p class="botText"><span>Finding match</span></p>'
+    $('#chat-chat').append(userHtml)
+    $('#chatid').text('Find Match')
+  });
+  $('#btid').click(function() {
+    $('#chatid').text('Chat')
+    socket.emit('forcedisconnect')
+  });
+  socket.on('found match', function (message) {
+    let userHtml = '<p class="botText"><span>Match found</span></p>'
+    $('#chat-chat').append(userHtml)
+    document.getElementById('chat-bar-bottom').scrollIntoView(true)
+})
+socket.on('match disconnected', function (message) {
+    var userHtml = '<p class="botText"><span>Stranger has disconnect</span></p>';
+    $('#chat-chat').append(userHtml)
+    document.getElementById('chat-bar-bottom').scrollIntoView(true);
+})

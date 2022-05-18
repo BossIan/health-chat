@@ -1,82 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WTPGAMHA/GADC</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Libre+Bodoni&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="src/css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="src/css/chat.css">
-</head>
-<body>
-    <ul class='tab'>
-        <li><a class="tabs" href="index.html">Home</a></li>
-        <li><a class="tabs" href="activities.html">Activities</a></li>
-        <li><a class="tabs" href="hotlines.html">Hotlines</a></li>
-        <li><a class="tabs" href="reminders.html">Reminders</a></li>
-        <li><a class="tabs" id='login' href="login.html">Login</a></li>
-        <li class="icon"><a class="tabs" onclick="var x = document.getElementsByClassName('tab');
-            if (x[0].className == 'tab') {
-                x[0].className += ' responsive';
-            } else {
-                x[0].className = 'tab';
-            }">
-            <i class="fa fa-bars"></i>
-          </a></li>
-    </ul>
-    <div class="chat-bar-collapsible"> 
-        <button id="chat-button" type="button" class="collapsible">Chat</button>
-        <div class="content">
-            <div class="full-chat-block">
-                <div class="outer-container">
-                    <div class="chattab">
-                        <button class="chattabs" onclick="
-                            document.getElementById('bot-chat').style.display = 'block'
-                            document.getElementById('chat-chat').style.display = 'none'
-                        ">Bot</button>
-                        <button class="chattabs" onclick="
-                        document.getElementById('bot-chat').style.display = 'none'
-                        document.getElementById('chat-chat').style.display = 'block'
-                        ">Chat</button>
-                      </div>
-                    <div class="chat-container">
-                        <div class="chatbox" id="bot-chat">
-                            <h5 class="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                        </div>
-                        <div class="chatbox" id="chat-chat">
-                            <h5 class="chat-timestamp"></h5>
-                        </div>
-                        <div class="chat-bar-input-block">
-                            <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message">
-                                <p></p>
-                            </div>
 
-                            <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: lightgray;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
-                            </div>
-                        </div>
-                          <div id="chat-bar-bottom">
-                            <p></p>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="src/index.js"></script>
-    <script src="src/nlp.js"></script>
-    <script src="src/responses.js"></script>
-    <script src="src/chat.js"></script>
-    <script src="src/axios.js"></script> 
-    <script src="src/login.js"></script>
     <div class="login-block">
         <div class="login-container">
             <label for="uname"><b>Email</b></label>
@@ -93,5 +15,3 @@
             <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
           </div>
     </div>
-</body>
-</html>
