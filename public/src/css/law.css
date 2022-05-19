@@ -10,6 +10,7 @@
     z-index: -1;
   }
   .contents {
+    color: white;
     background-color:var(--light);
     padding-bottom: 20px;
     color: white;
