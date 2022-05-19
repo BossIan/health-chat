@@ -139,9 +139,38 @@ io.on('connection', function (socket) {
       .then(function (dbdata) {
         socket.emit('viewCounted', dbdata)
        })
+       surveys.find( { approved: 'true' } )
+        .then( function (dbdata) {
+          socket.emit('surveyApprove', dbdata)
+        })
+    })
+    socket.on('approve', function (id) {
+      surveys.findByIdAndUpdate(id, {approved : 'true'})
+      .then( function () {
+        surveys.find( { approved: '' } )
+        .then( function (dbdata) {
+          socket.emit('surveyOne', dbdata[0])
+        })
+        surveys.find( { approved: 'true' } )
+        .then( function (dbdata) {
+          socket.emit('surveyApprove', dbdata)
+        })
+      })
+    })
+    socket.on('disapprove', function (id) {
+      surveys.findByIdAndUpdate(id, {approved : 'false'})
+      .then( function () {
+        surveys.find( { approved: '' } )
+        .then( function (dbdata) {
+          socket.emit('surveyOne', dbdata[0])
+        })
+      })
     })
     socket.on('surveys', function () {
-      
+      surveys.find( { approved: '' } )
+      .then( function (dbdata) {
+        socket.emit('surveyOne', dbdata[0])
+      })
     })
     socket.on('submitForm', function (data) {
       var newform = new surveys(data)
