@@ -13,6 +13,7 @@ storage.setItem("login", "false");
             $('#login').text("Login")
             $('#login').attr("href","login.html");
             window.location.href = 'index.html';
+            localStorage.setItem("admin", "false");
+            sessionStorage.setItem("admin", "false");
         }
-        $('#dashboard').remove();
     </script>

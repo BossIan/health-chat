@@ -1,31 +1,62 @@
 
-function login() {
-    if ($('#pswtext').val() == "") {
-        alert("Enter Password")
-        return
+function login(admin) {
+    if (admin) {
+        if ($('#adminpswtext').val() == "") {
+            alert("Enter Password")
+            return
+        }
+        if ($('#adminunametext').val() == "") {
+            alert("Enter Email")
+            return
+        }
+        var storage;
+        if ($('#adminrememberme').val() == "on") {
+            var storage;
+            storage = localStorage
+            }
+            else {
+                storage = sessionStorage
+            }
+    }   else {
+        if ($('#pswtext').val() == "") {
+            alert("Enter Password")
+            return
+        }
+        if ($('#unametext').val() == "") {
+            alert("Enter Email")
+            return
+        }
+        if ($('#rememberme').val() == "on") {
+            var storage;
+            storage = localStorage
+            }
+            else {
+                storage = sessionStorage
+            }
     }
-    if ($('#unametext').val() == "") {
-        alert("Enter Email")
-        return
-    }
-    var storage;
-    if ($('#rememberme').val() == "on") {
         
-        storage = localStorage
+    if (admin) {
+        var data = {
+            name: $('#adminunametext').val(),
+            email: $('#adminunametext').val(),
+            password: $('#adminpswtext').val()
+        } 
+    } else {
+        var data = {
+            name: $('#unametext').val(),
+            email: $('#unametext').val(),
+            password: $('#pswtext').val()
+        } 
     }
-    else {
-        storage = sessionStorage
-    }
-    var data = {
-        name: $('#unametext').val(),
-        email: $('#unametext').val(),
-        password: $('#pswtext').val(),
-        admin: false
-    } 
+    
     socket.emit('login' , data)
     socket.once('login success' ,function (data) {
         storage.setItem("login", "true");
-        storage.setItem("email", $('#unametext').val());
+        if (admin) {
+            storage.setItem("email", $('#adminunametext').val());
+        } else {
+            storage.setItem("email", $('#unametext').val());
+        }
         $('#login').text(storage.getItem("email"))
         jQuery(this).prev("login").attr("id","email");
         if (data) {
@@ -37,7 +68,38 @@ function login() {
         alert('Invalid Email/Password')
     })
 }
-function register() {
+function register(admin) {
+    if (admin) {
+        if (ValidateEmail($('#adminunametext').val()) == false) {
+            return
+        }
+        if ($('#adminpswtext').val() == "") {
+            alert("Enter Password")
+            return
+        }
+        if ($('#adminpswtext').val() == "") {
+            alert("Enter Email")
+            return
+        }
+        var user = {
+            name: $('#adminunametext').val(),
+            email: $('#adminunametext').val(),
+            password: $('#adminpswtext').val(),
+            reminders: 'Drink Water',
+            reminderschecked: '',
+            reminderstime: '11:10 PM',
+            admin: true
+        }
+        socket.emit('register', user)
+        socket.once('registered already', function () {
+            alert('Email already registered')
+        })
+        socket.once('register successful', function () {
+            alert('Returning to Login')
+            window.location.href = '';
+        })
+        return      
+    }
     if (ValidateEmail($('#unametext').val()) == false) {
         return
     }
@@ -56,7 +118,7 @@ function register() {
         reminders: 'Drink Water',
         reminderschecked: '',
         reminderstime: '11:10 PM',
-        admin: true
+        admin: false
     }
     socket.emit('register', user)
     socket.once('registered already', function () {

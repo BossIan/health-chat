@@ -23,7 +23,6 @@ window.onscroll = function () {
     }
 }
 $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
-var spinner = "<img src='http://i.imgur.com/pKopwXp.gif' alt='loading...' />";
 function changetab(tab) {
     if (tab == 'home') {
         $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")

@@ -12,6 +12,20 @@
             <label>
               <input id="rememberme" type="checkbox" checked="checked" name="remember"> Remember me
             </label>
-            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+          </div>
+          
+          <div class="login-container">
+            <h1>Admin</h1>
+            <label for="adminunametext"><b>Email</b></label>
+            <input id="adminunametext" type="text" placeholder="Enter Email" name="adminemail" required>
+        
+            <label for="adminpswtext"><b>Password</b></label>
+            <input id="adminpswtext" type="password" placeholder="Enter Password" name="adminpsw" required>
+        
+            <button class="btn" type="submit" onclick="login(true)">Login</button>
+            <button class="btn" type="submit" onclick="register(true)">Register</button>
+            <label>
+              <input id="adminrememberme" type="checkbox" checked="checked" name="adminremember"> Remember me
+            </label>
           </div>
     </div>
