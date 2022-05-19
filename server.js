@@ -94,7 +94,7 @@ setInterval(() => {
       console.log(dbdata.counters);
     })
   })
-}, 8.64e+7);
+}, 86400000);
 const visits = mongoose.model('visits', visitSchema);
 function visitUp() {
   visits.findByIdAndUpdate('6281bffe00f21e7666d93b5b', {$inc: {counter: 1}})
