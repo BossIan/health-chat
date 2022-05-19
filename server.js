@@ -29,6 +29,62 @@ const visitSchema = new Schema ({
   counter: Number,
   counters: Array
 })
+const surveysSchema = new Schema({ 
+  name: String,
+  dateOfBirth : String,
+  placeOfBirth : String,
+  sex: String,
+  civilStatus : String,
+  citizenShip : String,
+  mobileNumber : String,
+  email : String,
+  presentAddress : String,
+  presentZipcode : String,
+  permanentAddress : String,
+  permanentZipcode : String,
+  nameOfSchoolLastAttended: String,
+  schoolAddress : String,
+  schoolSector : String,
+  highestAttainedGradeYearLevel : String,
+  typeOfDisability : String,
+  ipAffiliation : String,
+  statusFather : String,
+  statusMother : String,
+  nameFather : String,
+  nameMother : String,
+  nameGuardian : String,
+  addressFather : String,
+  addressMother : String,
+  addressGuardian : String,
+  contactNumberFather : String,
+  contactNumberMother : String,
+  contactNumberGuardian : String,
+  occupationFather : String,
+  occupationMother : String,
+  occupationGuardian : String,
+  nameOfEmployerFather : String,
+  nameOfEmployerMother : String,
+  nameOfEmployerGuardian : String,
+  employerAddressFather : String,
+  employerAddressMother : String,
+  employerAddressGuardian : String,
+  highestEducationalAttainmentFather : String,
+  highestEducationalAttainmentMother : String,
+  highestEducationalAttainmentGuardian : String,
+  totalParentsTaxableIncomeFather : String,
+  totalParentsTaxableIncomeMother : String,
+  totalParentsTaxableIncomeGuardian : String,
+  dsdw : String,
+  schoolEnroll : String,
+  schoolAddress0 : String,
+  typeOfSchool : String,
+  degreeProgram : String,
+  enjoying : String,
+  signature : String,
+  dateAccomplished : String,
+  approved : String
+});
+const surveys = mongoose.model('surveys', surveysSchema);
 setInterval(() => {
   visits.findById('6281bffe00f21e7666d93b5b')
   .then(function (dbdata) {
@@ -83,6 +139,13 @@ io.on('connection', function (socket) {
       .then(function (dbdata) {
         socket.emit('viewCounted', dbdata)
        })
+    })
+    socket.on('surveys', function () {
+      
+    })
+    socket.on('submitForm', function (data) {
+      var newform = new surveys(data)
+      newform.save()
     })
     socket.on('send message', function (message) {
          socket.to(users[socket.id].inroom).emit('message sent', message);
