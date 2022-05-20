@@ -16,6 +16,7 @@ body {
     width: 25%;
     min-width: 400px;
     background-color:	var(--light);
+    padding-bottom: 200px;
 }
 .login-container {
   padding-top: 30%;

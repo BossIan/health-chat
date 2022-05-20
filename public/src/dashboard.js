@@ -52,6 +52,7 @@ socket.on('surveyApprove', function (data) {
 socket.on('feedback', function (data) {
     $('#feedback').empty()
     data.forEach(dbdata => {
-        $('#feedback').append('<p>'+dbdata.message+'</p>')
+        $('#feedback').append('<p>'+dbdata.sender+ ': '+dbdata.message+'</p>')
+        socket.emit('feedbackRead',dbdata._id)
     })
 })

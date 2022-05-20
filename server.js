@@ -30,7 +30,8 @@ const visitSchema = new Schema ({
   counters: Array
 })
 const feedbackSchema = new Schema ({
-  message: String
+  message: String,
+  sender : String
 })
 const surveysSchema = new Schema({ 
   name: String,
@@ -151,6 +152,12 @@ io.on('connection', function (socket) {
         .then( function (dbdata) {
           socket.emit('feedback', dbdata)
         })
+    })
+    socket.on('feedbackRead', function (id) {
+      feedback.findByIdAndDelete(id)
+      .then( function (data) {
+        console.log(data);
+      })
     })
     socket.on('feedbackSend', function (feedbackdata) {
       var newfeedback = new feedback(feedbackdata)

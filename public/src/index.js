@@ -24,45 +24,46 @@ window.onscroll = function () {
         topnav[0].style.background='var(--dark)';
     }
 }
+var spinner = "<img src='https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif' alt='loading...' />";
 $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
 function changetab(tab) {
     if (tab == 'home') {
         $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
-        $('.contents').load('./home.html')
+        $('.contents').html(spinner).load('./home.html')
         return
     }
     if (tab == 'scholarship') {
         $('.css').empty().append("<link rel='stylesheet' href='src/css/scholarship.css'>')")
-        $('.contents').load('./scholarship.html')
+        $('.contents').html(spinner).load('./scholarship.html')
         return
     }
     if (tab == 'hotlines') {
         $('.css').empty().append("<link rel='stylesheet' href='src/css/Hotlines.css'>')")
-        $('.contents').load('./hotlines.html')
+        $('.contents').html(spinner).load('./hotlines.html')
         return
     }
     if (tab == 'reminders') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/reminders.css'>')")
-        $('.contents').load('./reminders.html')
+        $('.contents').html(spinner).load('./reminders.html')
         return
     }
     if (tab == 'login') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/login.css'>')")
-        $('.contents').load('./login.html')
+        $('.contents').html(spinner).load('./login.html')
         return
     }
     if (tab == 'dashboard') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/dashboard.css'>')")
-        $('.contents').load('./dashboard.html')
+        $('.contents').html(spinner).load('./dashboard.html')
         return
     }
     if (tab == 'law') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/law.css'>')")
-        $('.contents').load('./law.html')
+        $('.contents').html(spinner).load('./law.html')
         return
     }
     if (tab == 'account') {
-        $('.contents').load('./account.html')
+        $('.contents').html(spinner).load('./account.html')
         return
     }
 }
@@ -73,7 +74,8 @@ if (admin == 'true') {
 function feedbackclick() {
     if ($('#feedbackid').val() != '') {
         var data =  {
-            message : $('#feedbackid').val()
+            message : $('#feedbackid').val(),
+            sender : storage.getItem("email")
         }
         $('#feedbackid').val('')
         socket.emit('feedbackSend', data)
