@@ -29,41 +29,41 @@ $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
 function changetab(tab) {
     if (tab == 'home') {
         $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
-        $('.contents').html(spinner).load('./home.html')
+        $('.contents').load('./home.html')
         return
     }
     if (tab == 'scholarship') {
         $('.css').empty().append("<link rel='stylesheet' href='src/css/scholarship.css'>')")
-        $('.contents').html(spinner).load('./scholarship.html')
+        $('.contents').load('./scholarship.html')
         return
     }
     if (tab == 'hotlines') {
         $('.css').empty().append("<link rel='stylesheet' href='src/css/Hotlines.css'>')")
-        $('.contents').html(spinner).load('./hotlines.html')
+        $('.contents').load('./hotlines.html')
         return
     }
     if (tab == 'reminders') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/reminders.css'>')")
-        $('.contents').html(spinner).load('./reminders.html')
+        $('.contents').load('./reminders.html')
         return
     }
     if (tab == 'login') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/login.css'>')")
-        $('.contents').html(spinner).load('./login.html')
+        $('.contents').load('./login.html')
         return
     }
     if (tab == 'dashboard') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/dashboard.css'>')")
-        $('.contents').html(spinner).load('./dashboard.html')
+        $('.contents').load('./dashboard.html')
         return
     }
     if (tab == 'law') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/law.css'>')")
-        $('.contents').html(spinner).load('./law.html')
+        $('.contents').load('./law.html')
         return
     }
     if (tab == 'account') {
-        $('.contents').html(spinner).load('./account.html')
+        $('.contents').load('./account.html')
         return
     }
 }
