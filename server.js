@@ -29,6 +29,9 @@ const visitSchema = new Schema ({
   counter: Number,
   counters: Array
 })
+const feedbackSchema = new Schema ({
+  message: String
+})
 const surveysSchema = new Schema({ 
   name: String,
   dateOfBirth : String,
@@ -85,6 +88,7 @@ const surveysSchema = new Schema({
   approved : String
 });
 const surveys = mongoose.model('surveys', surveysSchema);
+const feedback = mongoose.model('feedback', feedbackSchema);
 setInterval(() => {
   visits.findById('6281bffe00f21e7666d93b5b')
   .then(function (dbdata) {
@@ -143,6 +147,20 @@ io.on('connection', function (socket) {
         .then( function (dbdata) {
           socket.emit('surveyApprove', dbdata)
         })
+        feedback.find()
+        .then( function (dbdata) {
+          socket.emit('feedback', dbdata)
+        })
+    })
+    socket.on('feedbackSend', function (feedbackdata) {
+      var newfeedback = new feedback(feedbackdata)
+      newfeedback.save()
+      .then (function () {
+        feedback.find()
+        .then( function (dbdata) {
+          socket.emit('feedback', dbdata)
+        })
+      })
     })
     socket.on('approve', function (id) {
       surveys.findByIdAndUpdate(id, {approved : 'true'})

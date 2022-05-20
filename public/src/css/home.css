@@ -24,7 +24,7 @@
   background-color: rgba(245, 245, 220, 0.507);
   padding-bottom: 100px;
 }
-h3 {
+.subheading h3 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
   box-shadow: 10px 10px 0 wheat;

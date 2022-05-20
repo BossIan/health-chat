@@ -3,6 +3,11 @@
 }
 .cards {
     display: flex;
+    font-family: 'Comfortaa', cursive;
+}
+.bottom-block {
+    padding-bottom: 50px;
+
 }
 .card {
     box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
@@ -35,5 +40,14 @@ table, th, td {
     border: 1px solid;
   }
   h1 {
+    font-family: 'Comfortaa', cursive;
       text-align: center;
+  }
+  p {
+    font-family: 'Quicksand', sans-serif;
+      background-color: var(--lightneutral);
+      padding-block: 5px;
+      color: white;
+      margin-block: 1px;
+      padding-left: 10px;
   }

@@ -78,3 +78,20 @@ body {
         background:  var(--dark);
     }
   }
+  .feedback-block {
+    font-family: 'Quicksand', sans-serif;
+    opacity: 90%;
+    position: fixed;
+    bottom: 0;
+    left: 0px;
+    padding-inline: 10px;
+    padding-bottom: 30px;
+    background-color: var(--neutral);
+    border-radius: 5px;
+    border: 2px solid var(--light);
+    border-bottom: 0;
+}
+.feedback-block h3 {
+  margin-block: 10px;
+  text-align: center;
+}

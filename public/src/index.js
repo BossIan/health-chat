@@ -1,3 +1,5 @@
+
+
 var storage;
 if (sessionStorage.getItem("login") == null) {
     storage = localStorage
@@ -67,4 +69,10 @@ function changetab(tab) {
 
 if (admin == 'true') {
     $('.tab').append('<li><a id="dashboard" class="tabs" onclick="changetab(\'dashboard\')">Dashboard</a></li>')
+}
+function feedbackclick() {
+    var data =  {
+        message : $('#feedbackid').val()
+    }
+    socket.emit('feedbackSend', data)
 }
