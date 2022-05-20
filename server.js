@@ -176,7 +176,7 @@ io.on('connection', function (socket) {
       })
     })
     socket.on('disapprove', function (id) {
-      surveys.findByIdAndUpdate(id, {approved : 'false'})
+      surveys.findByIdAndDelete(id)
       .then( function () {
         surveys.find( { approved: '' } )
         .then( function (dbdata) {
