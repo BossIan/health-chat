@@ -71,8 +71,13 @@ if (admin == 'true') {
     $('.tab').append('<li><a id="dashboard" class="tabs" onclick="changetab(\'dashboard\')">Dashboard</a></li>')
 }
 function feedbackclick() {
-    var data =  {
-        message : $('#feedbackid').val()
+    if ($('#feedbackid').val() != '') {
+        var data =  {
+            message : $('#feedbackid').val()
+        }
+        $('#feedbackid').val('')
+        socket.emit('feedbackSend', data)
+    } else {
+        alert('Input feedback')
     }
-    socket.emit('feedbackSend', data)
 }
