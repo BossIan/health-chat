@@ -28,32 +28,32 @@ var spinner = "<img src='https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.
 $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
 function changetab(tab) {
     if (tab == 'home') {
-        $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
+        $('.css').empty().load().append("<link rel='stylesheet' href='src/css/home.css'>')")
         $('.contents').load('./home.html')
         return
     }
     if (tab == 'scholarship') {
-        $('.css').empty().append("<link rel='stylesheet' href='src/css/scholarship.css'>')")
+        $('.css').empty().load().append("<link rel='stylesheet' href='src/css/scholarship.css'>')")
         $('.contents').load('./scholarship.html')
         return
     }
     if (tab == 'hotlines') {
-        $('.css').empty().append("<link rel='stylesheet' href='src/css/Hotlines.css'>')")
+        $('.css').empty().load().append("<link rel='stylesheet' href='src/css/Hotlines.css'>')")
         $('.contents').load('./hotlines.html')
         return
     }
     if (tab == 'reminders') {
-        $('.css').empty().append("'<link rel='stylesheet' href='src/css/reminders.css'>')")
+        $('.css').empty().load().append("'<link rel='stylesheet' href='src/css/reminders.css'>')")
         $('.contents').load('./reminders.html')
         return
     }
     if (tab == 'dashboard') {
-        $('.css').empty().append("'<link rel='stylesheet' href='src/css/dashboard.css'>')")
+        $('.css').empty().load().append("'<link rel='stylesheet' href='src/css/dashboard.css'>')")
         $('.contents').load('./dashboard.html')
         return
     }
     if (tab == 'law') {
-        $('.css').empty().append("'<link rel='stylesheet' href='src/css/law.css'>')")
+        $('.css').empty().load().append("'<link rel='stylesheet' href='src/css/law.css'>')")
         $('.contents').load('./law.html')
         return
     }
