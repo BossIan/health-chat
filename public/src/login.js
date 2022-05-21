@@ -57,14 +57,12 @@ function login(admin) {
         storage.setItem("login", "true");
         if (admin) {
             storage.setItem("email", $('#adminunametext').val());
+            storage.setItem("admin", "true");
         } else {
             storage.setItem("email", $('#unametext').val());
         }
         $('#login').text(storage.getItem("email"))
         jQuery(this).prev("login").attr("id","email");
-        if (data) {
-            storage.setItem("admin", "true");
-        }
         window.location.href = '/';
     })
     socket.once('login failed' ,function () {
@@ -90,8 +88,7 @@ function register(admin) {
             password: $('#adminpswtext').val(),
             reminders: 'Drink Water',
             reminderschecked: '',
-            reminderstime: '11:10 PM',
-            admin: true
+            reminderstime: '11:10 PM'
         }
         socket.emit('register', user)
         socket.once('registered already', function () {
@@ -120,8 +117,7 @@ function register(admin) {
         password: $('#pswtext').val(),
         reminders: 'Drink Water',
         reminderschecked: '',
-        reminderstime: '11:10 PM',
-        admin: false
+        reminderstime: '11:10 PM'
     }
     socket.emit('register', user)
     socket.once('registered already', function () {
