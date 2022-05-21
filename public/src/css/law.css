@@ -20,14 +20,21 @@
         width: fit-content;
         height: fit-content;
         background-color: var(--lightneutral);
-        padding-top: 10px;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding: 5%;
         margin-inline: 5%;
         margin-bottom: 5%;
         width: 80%;
         align-items: center;
         display: grid;
+  }
+  .objectification img {
+    width : 100%;
+  }
+  .objectification {
+    width: 100%;
+  }
+  .law-block img {
+    width: 100%;
   }
   h1 {
       text-align: center;

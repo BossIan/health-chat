@@ -9,44 +9,25 @@
     position:fixed;
     z-index: -1;
   }
-.title {
-  width: fit-content;
-  text-align: center;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  word-spacing: 0.5vw;
-  font-size:2vw;
-  line-height: 10vh;
-  margin-inline: auto;
-  color: rgb(240, 240, 240);
+.title-image {
+  background-color: var(--light); 
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.subheading {
-  padding-top: 100px; 
-  background-color: rgba(245, 245, 220, 0.507);
-  padding-bottom: 100px;
+.title-image img{
+  width: 100%;
 }
-.subheading h3 {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100;
-  box-shadow: 10px 10px 0 wheat;
-  margin-inline: 100px; 
-  padding: 10px;
-  padding-bottom: 0;
-  background-color:aliceblue
+.images {
+  background-color: var(--light);
+  width: 100%;
+  height: auto;
+  display: inline-block
 }
-a {
-  color: black;
+.images img {
+  width: 60%;
+  padding-inline: 20%;
 }
-h2 {
-  color: rgb(240, 240, 240);
-  font-weight:bold;
-  font-family: 'Quicksand', sans-serif;
-}
-@media screen and (max-width: 600px) {
-  h3{
-    margin-inline: 0;
-    width: 100%;
-  }
-  .subheading {
-    width: 100%;
-  }
+img {
+  border-radius: 5px
 }

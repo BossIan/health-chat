@@ -2,25 +2,8 @@
 if (sessionStorage.getItem("login") == 'true' || localStorage.getItem("login") == 'true') {
     $('body').load('./index2.html')
 }
-function login(admin) {
-    if (admin) {
-        if ($('#adminpswtext').val() == "") {
-            alert("Enter Password")
-            return
-        }
-        if ($('#adminunametext').val() == "") {
-            alert("Enter Email")
-            return
-        }
-        var storage;
-        if ($('#adminrememberme').val() == "on") {
-            var storage;
-            storage = localStorage
-            }
-            else {
-                storage = sessionStorage
-            }
-    }   else {
+function login() {
+    
         if ($('#pswtext').val() == "") {
             alert("Enter Password")
             return
@@ -36,31 +19,28 @@ function login(admin) {
             else {
                 storage = sessionStorage
             }
-    }
-        
-    if (admin) {
-        var data = {
-            name: $('#adminunametext').val(),
-            email: $('#adminunametext').val(),
-            password: $('#adminpswtext').val()
-        } 
-    } else {
+    
+        if (adminEmail($('#unametext').val())) {
+            storage.setItem("login", "true");
+            storage.setItem("admin", "true");
+            storage.setItem("email", $('#unametext').val());
+            $('#login').text(storage.getItem("email"))
+            jQuery(this).prev("login").attr("id","email");
+            window.location.href = '/';
+            return
+        }
         var data = {
             name: $('#unametext').val(),
             email: $('#unametext').val(),
             password: $('#pswtext').val()
         } 
-    }
+    
     
     socket.emit('login' , data)
-    socket.once('login success' ,function (data) {
+    socket.once('login success' ,function () {
         storage.setItem("login", "true");
-        if (admin) {
-            storage.setItem("email", $('#adminunametext').val());
-            storage.setItem("admin", "true");
-        } else {
-            storage.setItem("email", $('#unametext').val());
-        }
+        storage.setItem("email", $('#unametext').val());
+        
         $('#login').text(storage.getItem("email"))
         jQuery(this).prev("login").attr("id","email");
         window.location.href = '/';
@@ -70,36 +50,6 @@ function login(admin) {
     })
 }
 function register(admin) {
-    if (admin) {
-        if (ValidateEmail($('#adminunametext').val()) == false) {
-            return
-        }
-        if ($('#adminpswtext').val() == "") {
-            alert("Enter Password")
-            return
-        }
-        if ($('#adminpswtext').val() == "") {
-            alert("Enter Email")
-            return
-        }
-        var user = {
-            name: $('#adminunametext').val(),
-            email: $('#adminunametext').val(),
-            password: $('#adminpswtext').val(),
-            reminders: 'Drink Water',
-            reminderschecked: '',
-            reminderstime: '11:10 PM'
-        }
-        socket.emit('register', user)
-        socket.once('registered already', function () {
-            alert('Email already registered')
-        })
-        socket.once('register successful', function () {
-            alert('Returning to Login')
-            window.location.href = '';
-        })
-        return      
-    }
     if (ValidateEmail($('#unametext').val()) == false) {
         return
     }
@@ -145,3 +95,12 @@ function ValidateEmail(input) {
     }
   
   }
+function adminEmail(email) {
+    var validRegex = /^admin+[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@+gmail+.+com$/
+    if (email.match(validRegex)) {
+  
+        return true;
+    
+      }
+      return false
+}

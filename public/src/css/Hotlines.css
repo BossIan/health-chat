@@ -31,6 +31,9 @@
     .column {
       width: 100%;
     }
+    .img img{
+      object-fit: contain;
+    }
   }
   
   .card {
@@ -64,4 +67,15 @@
     
     font-family: 'Quicksand', sans-serif;
     font-size: small;
+  }
+  .img img{
+    width: 100%;
+    max-width:700px;
+    height: 100%;
+  }
+  .img {
+    background-color: var(--lightneutral) ;
+    flex: 50%;
+    margin-bottom: 6px;
+    padding-inline: 2px;
   }
