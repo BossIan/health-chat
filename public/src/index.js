@@ -47,11 +47,6 @@ function changetab(tab) {
         $('.contents').load('./reminders.html')
         return
     }
-    if (tab == 'login') {
-        $('.css').empty().append("'<link rel='stylesheet' href='src/css/login.css'>')")
-        $('.contents').load('./login.html')
-        return
-    }
     if (tab == 'dashboard') {
         $('.css').empty().append("'<link rel='stylesheet' href='src/css/dashboard.css'>')")
         $('.contents').load('./dashboard.html')

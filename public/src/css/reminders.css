@@ -1,5 +1,4 @@
 .bg-image {
-    background-image: url("../assets/pexels-karolina-grabowska-4210881.jpg");
     width:100%;
     height:100%;
     filter: brightness(75%);
