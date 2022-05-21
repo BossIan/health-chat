@@ -24,41 +24,41 @@ window.onscroll = function () {
         topnav[0].style.background='var(--dark)';
     }
 }
-var spinner = "<img src='' alt='loading...' />";
+var loading = "<img src='' alt='loading...' />";
 $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
 function changetab(tab) {
     if (tab == 'home') {
-        $('.css').empty().load(spinner).append("<link rel='stylesheet' href='src/css/home.css'>')")
-        $('.contents').load('./home.html')
+        $('.css').empty().append("<link rel='stylesheet' href='src/css/home.css'>')")
+        $('.contents').empty().load('./home.html')
         return
     }
     if (tab == 'scholarship') {
-        $('.css').empty().load(spinner).append("<link rel='stylesheet' href='src/css/scholarship.css'>')")
-        $('.contents').load('./scholarship.html')
+        $('.css').empty().append("<link rel='stylesheet' href='src/css/scholarship.css'>')")
+        $('.contents').empty().load('./scholarship.html')
         return
     }
     if (tab == 'hotlines') {
-        $('.css').empty().load(spinner).append("<link rel='stylesheet' href='src/css/Hotlines.css'>')")
-        $('.contents').load('./hotlines.html')
+        $('.css').empty().append("<link rel='stylesheet' href='src/css/Hotlines.css'>')")
+        $('.contents').empty().load('./hotlines.html')
         return
     }
     if (tab == 'reminders') {
-        $('.css').empty().load(spinner).append("'<link rel='stylesheet' href='src/css/reminders.css'>')")
-        $('.contents').load('./reminders.html')
+        $('.css').empty().append("'<link rel='stylesheet' href='src/css/reminders.css'>')")
+        $('.contents').empty().load('./reminders.html')
         return
     }
     if (tab == 'dashboard') {
-        $('.css').empty().load(spinner).append("'<link rel='stylesheet' href='src/css/dashboard.css'>')")
-        $('.contents').load('./dashboard.html')
+        $('.css').empty().append("'<link rel='stylesheet' href='src/css/dashboard.css'>')")
+        $('.contents').empty().load('./dashboard.html')
         return
     }
     if (tab == 'law') {
-        $('.css').empty().load(spinner).append("'<link rel='stylesheet' href='src/css/law.css'>')")
-        $('.contents').load('./law.html')
+        $('.css').empty().append("'<link rel='stylesheet' href='src/css/law.css'>')")
+        $('.contents').empty().load('./law.html')
         return
     }
     if (tab == 'account') {
-        $('.contents').load('./account.html')
+        $('.contents').empty().load('./account.html')
         return
     }
 }
