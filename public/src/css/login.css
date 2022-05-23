@@ -2,6 +2,7 @@ body {
     background-image: url('../assets/282654383_1115406309024345_4198657551417925337_n.jpg');
     background-attachment: fixed;
     background-size:contain;
+    background-repeat: no-repeat;
   }
 
 .login-block {
