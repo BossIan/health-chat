@@ -1,5 +1,5 @@
 body {
-    background-image: url('../assets/pexels-pixabay-289586.jpg');
+    background-image: url('../assets/282654383_1115406309024345_4198657551417925337_n.jpg');
     background-attachment: fixed;
     background-size: cover;
   }
@@ -16,7 +16,7 @@ body {
     width: 25%;
     min-width: 400px;
     background-color:	var(--light);
-    padding-bottom: 200px;
+    height: 100%;
 }
 .login-container {
   padding-top: 30%;
