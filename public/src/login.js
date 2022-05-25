@@ -1,6 +1,7 @@
 
 if (sessionStorage.getItem("login") == 'true' || localStorage.getItem("login") == 'true') {
-    $('body').load('./index2.html')
+    
+    $('body').empty().load('./index2.html')
 }
 function login() {
     
