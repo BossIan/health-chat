@@ -9,6 +9,8 @@ else {
 }
 var login = storage.getItem("login");
 if (login == 'true') {
+    
+    $('.bg-images').css('display', 'none')
     $('#login').text(storage.getItem("email"))
     $('#login').attr("onClick","changetab('account')");
 }
