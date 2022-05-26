@@ -2,9 +2,25 @@ $("form").submit(function(e) {
     e.preventDefault();
 });
 function validateForm() {
-    if (localStorage.getItem("submitted") == 'true') {
-        return
-    }
+    var userdata = {
+        email: $('#login').text()
+    } 
+    socket.emit('validateSurvey', userdata)
+    socket.once('validated', function (dbdata) {
+        if (dbdata) {
+            alert('Already Submitted')
+            return
+        }
+        else {
+            socket.emit('submitForm', data)
+            userdata = {
+                email: $('#login').text(),
+                submitted: true
+            } 
+             socket.emit('submittedForm', userdata)
+        }
+    })
+    
     var data = 
     { 
         name: $('#lastname').val() + ' ' +$('#firstname').val() +' '+ $('#middlename').val() +' '+ $('#maidenname').val(),
@@ -61,6 +77,5 @@ function validateForm() {
         dateAccomplished : $('#dateAccomplished').val(),
         approved : ''
       }
-      socket.emit('submitForm', data)
-      localStorage.setItem("submitted", 'true');
+      
 }

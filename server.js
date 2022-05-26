@@ -23,7 +23,8 @@ const userSchema = new Schema({
   admin: Boolean,
   reminders : Array,
   reminderschecked : Array,
-  reminderstime : Array
+  reminderstime : Array,
+  submitted : Boolean
 });
 const visitSchema = new Schema ({
   counter: Number,
@@ -200,6 +201,23 @@ io.on('connection', function (socket) {
     socket.on('submitForm', function (data) {
       var newform = new surveys(data)
       newform.save()
+    })
+    socket.on('submittedForm', function(data) {
+      user.find( { email: data.email} )
+      .then(function (dbdata) {
+        if (dbdata.length == 1) {
+          dbdata[0].submitted = data.submitted
+          dbdata[0].save()
+        }
+      })
+    })
+    socket.on('validateSurvey', function (data) {
+      user.find( { email: data.email} )
+      .then(function (dbdata) {
+        if (dbdata.length == 1) {
+            socket.emit('validated', dbdata[0].submitted)
+        }
+      })
     })
     socket.on('send message', function (message) {
          socket.to(users[socket.id].inroom).emit('message sent', message);
