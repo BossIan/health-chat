@@ -51,7 +51,15 @@ input[type=text], input[type=password] {
     float: right;
     padding-top: 10px;
   }
-  
+  #forgotBtn {
+    display: flex;
+    color: blue;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: medium;
+  }
   @media screen and (max-width: 600px) {
     span.psw {
       display: block;
@@ -63,6 +71,9 @@ input[type=text], input[type=password] {
     }
     .login-container {
       margin-inline: 10px;
+    }
+    .bg-images {
+      display: none;
     }
   }
   input , button, label{

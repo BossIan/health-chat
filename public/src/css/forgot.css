@@ -1,0 +1,36 @@
+:root {
+    --light: rgba(172, 220, 212, 0.541);
+    --lightneutral: #768b99;
+    --neutral: rgb(0,142,168);
+    --dark: rgb(0,86,93);
+  }
+body {
+    background-color: var(--lightneutral);
+}
+.block {
+    margin-top: 50px;
+    display: grid;
+    background-color: var(--light);
+    padding: 10px;
+    padding-block: 100px;
+    width: 50%;
+    margin-inline: auto;
+    justify-content: center;
+    border-radius: 10px;
+}
+h1 {
+    margin-block: 10px;
+}
+h3 {
+    margin-block: 10px;
+}
+input {
+    margin-block: 10px;
+}
+@media screen and (max-width: 600px) {
+    .block {
+      margin-inline: 0;
+      width: 100%;
+      padding-inline: 0;
+    }
+  }

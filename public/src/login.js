@@ -105,3 +105,12 @@ function adminEmail(email) {
       }
       return false
 }
+function forgotpassword() {
+    if (ValidateEmail($('#unametext').val()) == false) {
+        return
+    }
+    socket.emit('forgotPassword', $('#unametext').val())
+    socket.once('passwordreset', function () {
+        alert('An email with a verification code was just sent to your email')
+    })
+}

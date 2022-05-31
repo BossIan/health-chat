@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="./src/css/forgot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="block">
+        <h1>Reset Your Password</h1>
+        <h3>Strong passwords include numbers, and symbols</h3>
+        <label for="newpassword">Enter New Password</label>
+        <input type="text" id="newpassword">
+        <i class="fa-solid fa-eye-slash"></i>
+        <label for="confirmpassword">Confirm New Password</label>
+        <input type="text" id="confirmpassword"><i class="fa-solid fa-eye"></i>
+        <button onclick="
+        if($('#newpassword').val() == $('#confirmpassword').val())
+        {
+        var url = location.href
+        var name = 'userId'
+        name = name.replace(/[\[]/,'\\\[').replace(/[\]]/,'\\\]');
+        var regexS = '[\\?&]'+name+'=([^&#]*)';
+        var regex = new RegExp( regexS );
+        var results = regex.exec( url );
+        var data = {
+            password : $('#newpassword').val(),
+            userId : results[1]
+        }
+        socket.emit('resetpassword', data)
+        }
+        else {
+            alert('Passwords does not match')
+        }
+        socket.once('passwordreseted', function () {
+            alert('Password Changed Succefully')
+        })
+        ">Reset Password</button>
+    </div>
+    <script>
+        const socket = io();</script>
+</body>
+</html>

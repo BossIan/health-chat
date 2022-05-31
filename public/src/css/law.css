@@ -39,3 +39,9 @@
   h1 {
       text-align: center;
   }
+  @media screen and (max-width: 600px) {
+    .law-block {
+      margin-inline: 0;
+      width: 90%;
+    }
+  }

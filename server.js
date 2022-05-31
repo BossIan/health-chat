@@ -1,14 +1,19 @@
-const { log } = require('console');
 const express = require('express');
 const mongoose = require('mongoose');
+const nodemailer = require("nodemailer");
+const path = require('path');
 const Schema = mongoose.Schema;
-const { type } = require('os');
 const app = express();
+const router = express.Router();
 const server = require("http").createServer(app);
 const socket = require('socket.io');
 const io = socket(server, {cors:{origin: "*",methods: ["GET", "POST"]}})
 var users = {};
-app.use('/', express.static('public'), function () {
+router.use('/',express.static('public'));
+router.get('/forgotpassword',function(req,res){
+  res.sendFile(path.join(__dirname+'/public/forgot.html'));
+});
+app.use('/', router, function () {
   visitUp()
 });
 const mongodbURL = 'mongodb+srv://DanicaRose:hatdoggaming@cluster0.e9jmu.mongodb.net/userdatabase?retryWrites=true&w=majority'
@@ -117,6 +122,24 @@ io.on('connection', function (socket) {
       userId: socket.id,
       socket : socket
     }
+    socket.on('forgotPassword', function (data) {
+      user.find( { email: data} )
+      .then(function (dbdata) {
+        if (dbdata.length == 1) {
+          main().catch(console.error);
+          socket.emit('passwordreset')
+        }
+      })
+    })
+    socket.on('resetpassword', function (data) {
+      user.findByIdAndUpdate(data.userId, {password : data.password})
+      .then(function () {
+        socket.emit('passwordreseted')
+      })
+      .catch(function () {
+        console.log('resetfailed');
+      })
+    })
     socket.on('find match', function () { 
       if (users[socket.id].inroom != '') {
         socket.leave(users[socket.id].inroom)
@@ -327,6 +350,21 @@ io.on('connection', function (socket) {
         users[socket.id].inroom = '';
     })
 })
+async function main(email) {
+  let transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    auth: {
+      user: 'Danicarosealcoriza4@gmail.com',
+      pass: '09707558596',
+    },
+  });
+  let info = await transporter.sendMail({
+    from: '"Dan" <foo@example.com>',
+    to: "celerine.cabaron.b@bulsu.edu.ph",
+    subject: "Hello",
+    text: "",
+  });
+}
 server.listen(process.env.PORT || 8080, function () {
     console.log(`Listening on ${server.address().port}`);
   });
