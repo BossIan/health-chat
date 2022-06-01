@@ -16,7 +16,7 @@
   justify-content: center;
 }
 .title-image img{
-  width: 100%;
+  width: 80%;
 }
 .images {
   background-color: var(--light);
@@ -25,9 +25,15 @@
   display: inline-block
 }
 .images img {
-  width: 60%;
-  padding-inline: 20%;
+  width: 40%;
+  padding-inline: 30%;
 }
 img {
   border-radius: 5px
+}
+@media screen and (max-width: 600px) {
+  .images img {
+    width: 80%;
+    padding-inline: 10%;
+  }
 }
