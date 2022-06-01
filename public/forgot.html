@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Libre+Bodoni&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
     <title>Forgot Password</title>
     <link rel="stylesheet" href="./src/css/forgot.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="block">
@@ -16,9 +18,8 @@
         <h3>Strong passwords include numbers, and symbols</h3>
         <label for="newpassword">Enter New Password</label>
         <input type="text" id="newpassword">
-        <i class="fa-solid fa-eye-slash"></i>
         <label for="confirmpassword">Confirm New Password</label>
-        <input type="text" id="confirmpassword"><i class="fa-solid fa-eye"></i>
+        <input type="text" id="confirmpassword">
         <button onclick="
         if($('#newpassword').val() == $('#confirmpassword').val())
         {
@@ -39,6 +40,8 @@
         }
         socket.once('passwordreseted', function () {
             alert('Password Changed Succefully')
+            location.href = '/'
+            alert('Returning to Main Page')
         })
         ">Reset Password</button>
     </div>

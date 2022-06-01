@@ -126,7 +126,7 @@ io.on('connection', function (socket) {
       user.find( { email: data} )
       .then(function (dbdata) {
         if (dbdata.length == 1) {
-          main().catch(console.error);
+          main(dbdata[0]).catch(console.error);
           socket.emit('passwordreset')
         }
       })
@@ -350,7 +350,7 @@ io.on('connection', function (socket) {
         users[socket.id].inroom = '';
     })
 })
-async function main(email) {
+async function main(dbdata) {
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
@@ -359,10 +359,10 @@ async function main(email) {
     },
   });
   let info = await transporter.sendMail({
-    from: '"Dan" <foo@example.com>',
-    to: "celerine.cabaron.b@bulsu.edu.ph",
-    subject: "Hello",
-    text: "",
+    from: '"BULSU-GADC-CIT" <foo@example.com>',
+    to: dbdata.email,
+    subject: "Reset Password",
+    text: 'To Reset password go to health-chat.herokuapp.com/forgotpassword?userId=' + dbdata._id.toString(),
   });
 }
 server.listen(process.env.PORT || 8080, function () {

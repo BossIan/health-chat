@@ -66,17 +66,20 @@ input[type=text], input[type=password] {
       float: none;
     }
     .login-block {
+      position: relative;
       width: 100%;
       padding: 0;
     }
     .login-container {
+      padding-top: 100px;
       margin-inline: 10px;
     }
     .bg-images {
-      display: none;
+      margin-top: 420px;
+      width: 100%;
     }
   }
-  input , button, label{
+  input , button, label, p{
     font-family: 'Quicksand', sans-serif;
   }
   b {

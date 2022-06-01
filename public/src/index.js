@@ -66,6 +66,7 @@ function changetab(tab) {
 
 if (admin == 'true') {
     $('.tab').append('<li><a id="dashboard" class="tabs" onclick="changetab(\'dashboard\')">Dashboard</a></li>')
+    $('.chat-bar-collapsible').css('display', 'none')
 }
 function feedbackclick() {
     if ($('#feedbackid').val() != '') {

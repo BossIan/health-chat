@@ -20,8 +20,13 @@ body {
 }
 h1 {
     margin-block: 10px;
+    font-family: 'Comfortaa', cursive;
 }
+input , button, label{
+    font-family: 'Quicksand', sans-serif;
+  }
 h3 {
+    font-family: 'Quicksand', sans-serif;
     margin-block: 10px;
 }
 input {
