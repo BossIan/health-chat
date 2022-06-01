@@ -93,7 +93,7 @@ input[type=text], input[type=password] {
       padding: 0;
     }
     .login-container {
-      padding-top: 100px;
+      padding-top: 50px;
       margin-inline: 10px;
     }
     .bg-images {
