@@ -30,7 +30,19 @@ h3 {
     margin-block: 10px;
 }
 input {
+  width: 90%;
     margin-block: 10px;
+    border: 0;
+}
+.fa-eye-slash {
+  width: 9%;
+   background-color: white;
+   padding-bottom: 2px;
+}
+.fa-eye {
+  width: 9%;
+  padding-bottom: 2px;
+   background-color: white;
 }
 @media screen and (max-width: 600px) {
     .block {

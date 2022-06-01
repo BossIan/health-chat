@@ -23,7 +23,19 @@
             <input id="unametext" type="text" placeholder="Enter Email" name="email" required>
             <p>Note: Please, use your bulsu mail account to register and log in.</p>
             <label for="psw"><b>Password</b></label>
-            <input id="pswtext" type="password" placeholder="Enter Password" name="psw" required>
+            <div><input id="pswtext" type="password" placeholder="Enter Password" name="psw" required><i onclick="
+                var x = document.getElementById('pswtext');
+                if (x.type === 'password') {
+                    $('#fa').addClass('fa-eye');
+                    $('#fa').removeClass('fa-eye-slash');
+                    x.type = 'text';
+
+                } else {
+                    $('#fa').addClass('fa-eye-slash');
+                    $('#fa').removeClass('fa-eye');
+                    x.type = 'password';
+                }
+                " class="fa fa-eye-slash"></i></div>
             
             <button class="btn" type="submit" onclick="login()">Login</button>
             <button class="btn" type="submit" onclick="register()">Register</button>

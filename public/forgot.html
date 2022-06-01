@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Libre+Bodoni&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
     <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./src/css/forgot.css">
 </head>
 <body>
@@ -17,9 +18,33 @@
         <h1>Reset Your Password</h1>
         <h3>Strong passwords include numbers, and symbols</h3>
         <label for="newpassword">Enter New Password</label>
-        <input type="text" id="newpassword">
+    <div><input type="text" id="newpassword"><i id="fanew" onclick="
+        var x = document.getElementById('newpassword');
+        if (x.type === 'password') {
+            $('#fanew').addClass('fa-eye');
+            $('#fanew').removeClass('fa-eye-slash');
+            x.type = 'text';
+
+        } else {
+            $('#fanew').addClass('fa-eye-slash');
+            $('#fanew').removeClass('fa-eye');
+            x.type = 'password';
+        }
+        " class="fa fa-eye-slash"></i></div>
         <label for="confirmpassword">Confirm New Password</label>
-        <input type="text" id="confirmpassword">
+        <div><input type="text" id="confirmpassword"><i id="faconfirm" onclick="
+        var x = document.getElementById('confirmpassword');
+        if (x.type === 'password') {
+            $('#faconfirm').addClass('fa-eye');
+            $('#faconfirm').removeClass('fa-eye-slash');
+            x.type = 'text';
+
+        } else {
+            $('#faconfirm').addClass('fa-eye-slash');
+            $('#faconfirm').removeClass('fa-eye');
+            x.type = 'password';
+        }
+        " class="fa fa-eye-slash"></i></div>
         <button onclick="
         if($('#newpassword').val() == $('#confirmpassword').val())
         {

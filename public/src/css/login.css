@@ -43,6 +43,28 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
+  #pswtext {
+    width: 90%;
+    border-right: 0;
+  }
+  .fa-eye-slash {
+    width: 9%;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-left: 0;
+     background-color: white;
+  }
+  .fa-eye {
+    width: 9%;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-left: 0;
+     background-color: white;
+  }
   .container {
     padding: 16px;
   }
